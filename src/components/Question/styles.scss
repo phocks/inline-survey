@@ -1,0 +1,56 @@
+.root {
+  padding-bottom: 2em;
+  p {
+    margin-bottom: 1em;
+  }
+
+  $bg: #332f35;
+  $fg: lighten($bg, 20%);
+  $borderWidth: 2px;
+
+  input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+  }
+
+  label {
+    font-family: ABCSans, sans-serif;
+    color: lighten($bg, 20%);
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: solid $borderWidth $fg;
+    border-radius: 2px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+  }
+
+  input[type="radio"]:checked + label {
+    color: lighten($bg, 80%);
+    background: $fg;
+  }
+
+  // label + input[type="radio"] + label {
+  //   // border-left: solid $borderWidth $fg;
+  //   margin-left: 4px
+  // }
+
+  .radio-group {
+    border: solid $borderWidth $fg;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  @import url("https://fonts.googleapis.com/css?family=Roboto");
+}
