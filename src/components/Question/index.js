@@ -5,7 +5,18 @@ export default props => {
   const { text, questionId = "default", onChange } = props;
 
   const handleChange = event => {
-    onChange({ questionId: questionId, selection: event.target.value });
+    const answer = event.target.value;
+
+    const key = {
+      "strongly-disagree": 1,
+      "somewhat-disagree": 2,
+      neutral: 3,
+      "somewhat-agree": 4,
+      "strongly-agree": 5,
+      "dont-know": 0
+    };
+
+    onChange({ questionId: questionId, selection: answer, value: key[answer] });
   };
 
   return (

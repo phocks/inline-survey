@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import styles from "./styles.scss";
 import Question from "../Question";
 
+import data from "./data.json";
+
+console.log(data);
+
 export default props => {
   const handleChange = data => {
     console.log(data);
