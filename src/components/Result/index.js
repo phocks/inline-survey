@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./styles.scss";
 
 import data from "./data.json";
@@ -6,6 +6,11 @@ console.log(data);
 
 export default props => {
   const { show } = props;
+
+  useEffect(() => {
+
+  }, [])
+
   return (
     <div className={styles.root}>
       {show && (

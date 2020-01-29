@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./styles.scss";
 import Question from "../Question";
+import Result from "../Result";
 
 export default props => {
   const handleChange = data => {
@@ -20,6 +21,7 @@ export default props => {
           questionId={"Q69_1"}
           onChange={handleChange}
         />
+        {/* <Result show={false} /> */}
         <Question
           text="Were more involved in my community"
           questionId={"Q69_10"}
