@@ -2,14 +2,18 @@ import React, { useEffect } from "react";
 import styles from "./styles.scss";
 
 import data from "./data.json";
-console.log(data);
+// console.log(data);
 
 export default props => {
-  const { show } = props;
+  const { show, question } = props;
 
   useEffect(() => {
+    const filtered = data.filter(row => {
+      return row.QID === "Q69_1";
+    });
 
-  }, [])
+    console.log(filtered);
+  }, []);
 
   return (
     <div className={styles.root}>

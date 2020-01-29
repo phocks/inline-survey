@@ -1,17 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.scss";
 import Question from "../Question";
 import Result from "../Result";
 
 export default props => {
+  const [answers, setAnswers] = useState({});
+
   const handleChange = data => {
-    console.log(data);
+    const newData = { [data.questionId]: data.value };
+    setAnswers({ ...answers, ...newData });
   };
 
   const handleSubmit = event => {
     event.preventDefault();
     console.log(event.target.elements);
   };
+
+  useEffect(() => {
+    console.log(answers)
+    if ('Q69_1' in answers) console.log("In there!")
+  }, [answers]) 
 
   return (
     <div className={styles.root}>
@@ -21,7 +29,7 @@ export default props => {
           questionId={"Q69_1"}
           onChange={handleChange}
         />
-        {/* <Result show={false} /> */}
+        {('Q69_1' in answers) && <Result show={true} />}
         <Question
           text="Were more involved in my community"
           questionId={"Q69_10"}
