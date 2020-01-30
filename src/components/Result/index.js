@@ -5,7 +5,7 @@ import data from "./data.json";
 
 
 export default props => {
-  const { show, questionId } = props;
+  const { questionId, choice } = props;
 
   useEffect(() => {
     const filtered = data.filter(row => {
@@ -17,8 +17,7 @@ export default props => {
 
   return (
     <div className={styles.root}>
-      
-        
+      {choice}
     </div>
   );
 };

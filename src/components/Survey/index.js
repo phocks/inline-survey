@@ -6,6 +6,9 @@ import Question from "../Question";
 import Result from "../Result";
 
 export default props => {
+  const [ageBracket, setAgeBracket] = useState();
+  const [gender, setGender] = useState();
+  const [region, setRegion] = useState();
   const [answers, setAnswers] = useState({});
 
   const handleChange = data => {
@@ -25,8 +28,9 @@ export default props => {
           questionId={"Q69_1"}
           onChange={handleChange}
         />
-        {"Q69_1" in answers && <Result questionId={"Q69_1"} />}
+        {"Q69_1" in answers && <Result questionId={"Q69_1"} choice={answers.Q69_1} />}
       </Portal>
+
       <div className={styles.displayNone}>
         <Question
           text="Had more friends"
