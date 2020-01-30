@@ -18,7 +18,6 @@ export default props => {
 
   useEffect(() => {
     console.log(answers)
-    if ('Q69_1' in answers) console.log("In there!")
   }, [answers]) 
 
   return (
@@ -31,52 +30,13 @@ export default props => {
           questionId={"Q69_1"}
           onChange={handleChange}
         />
-        {('Q69_1' in answers) && <Result show={true} />}
-        <Question
-          text="Were more involved in my community"
-          questionId={"Q69_10"}
-          onChange={handleChange}
-        />
-        <Question
-          text="Took better care of myself"
-          questionId={"Q69_11"}
-          onChange={handleChange}
-        />
-        <Question
-          text="Socialised more"
-          questionId={"Q69_12"}
-          onChange={handleChange}
-        />
-        <Question
-          text="Spent less time on social media"
-          questionId={"Q69_13"}
-          onChange={handleChange}
-        />
-        <Question
-          text="Slept more"
-          questionId={"Q69_14"}
-          onChange={handleChange}
-        />
-        <Question
-          text="Spent less time running errands and doing chores"
-          questionId={"Q69_15"}
-          onChange={handleChange}
-        />
-        <Question
-          text="Had (more) children"
-          questionId={"Q69_16"}
-          onChange={handleChange}
-        />
-        <Question
-          text="Had a more fulfilling romantic relationship"
-          questionId={"Q69_17"}
-          onChange={handleChange}
-        />
+        {('Q69_1' in answers) && <Result questionId={"Q69_1"} />}
         <Question
           text="Had more friends"
           questionId={"Q69_2"}
           onChange={handleChange}
         />
+        {('Q69_2' in answers) && <Result questionId={"Q69_2"} />}
         <Question
           text="Worked less"
           questionId={"Q69_3"}
@@ -112,7 +72,49 @@ export default props => {
           questionId={"Q69_9"}
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+        <Question
+          text="Were more involved in my community"
+          questionId={"Q69_10"}
+          onChange={handleChange}
+        />
+        {('Q69_10' in answers) && <Result questionId={"Q69_10"} />}
+        <Question
+          text="Took better care of myself"
+          questionId={"Q69_11"}
+          onChange={handleChange}
+        />
+        <Question
+          text="Socialised more"
+          questionId={"Q69_12"}
+          onChange={handleChange}
+        />
+        <Question
+          text="Spent less time on social media"
+          questionId={"Q69_13"}
+          onChange={handleChange}
+        />
+        <Question
+          text="Slept more"
+          questionId={"Q69_14"}
+          onChange={handleChange}
+        />
+        <Question
+          text="Spent less time running errands and doing chores"
+          questionId={"Q69_15"}
+          onChange={handleChange}
+        />
+        <Question
+          text="Had (more) children"
+          questionId={"Q69_16"}
+          onChange={handleChange}
+        />
+        <Question
+          text="Had a more fulfilling romantic relationship"
+          questionId={"Q69_17"}
+          onChange={handleChange}
+        />
+        
+        {/* <button type="submit">Submit</button> */}
       </form>
       </div>
     </div>

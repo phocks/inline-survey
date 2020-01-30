@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import styles from "./styles.scss";
 
 import data from "./data.json";
-// console.log(data);
+
 
 export default props => {
-  const { show, question } = props;
+  const { show, questionId } = props;
 
   useEffect(() => {
     const filtered = data.filter(row => {
-      return row.QID === "Q69_1";
+      return row.QID === questionId;
     });
 
     console.log(filtered);
@@ -17,11 +17,8 @@ export default props => {
 
   return (
     <div className={styles.root}>
-      {show && (
-        <div>
-          Find me in <strong>src/components/Result/index.js</strong>
-        </div>
-      )}
+      
+        
     </div>
   );
 };

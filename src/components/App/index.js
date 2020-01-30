@@ -7,7 +7,7 @@ export default props => {
   const myRef = useRef(null);
 
   useEffect(() => {
-    addClass(myRef.current.parentNode.parentNode, "u-full");
+    // addClass(myRef.current.parentNode.parentNode, "u-full");
   }, []);
 
   return (
