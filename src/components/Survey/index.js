@@ -28,16 +28,21 @@ export default props => {
           questionId={"Q69_1"}
           onChange={handleChange}
         />
-        {"Q69_1" in answers && <Result questionId={"Q69_1"} choice={answers.Q69_1} />}
+        {"Q69_1" in answers && (
+          <Result questionId={"Q69_1"} choice={answers.Q69_1} />
+        )}
       </Portal>
 
-      <div className={styles.displayNone}>
+      <Portal node={document.querySelector(".friends692")}>
         <Question
           text="Had more friends"
           questionId={"Q69_2"}
           onChange={handleChange}
         />
-        {"Q69_2" in answers && <Result questionId={"Q69_2"} />}
+        {"Q69_2" in answers && <Result questionId={"Q69_2"} choice={answers.Q69_2} />}
+      </Portal>
+
+      <div className={styles.displayNone}>
         <Question
           text="Worked less"
           questionId={"Q69_3"}
