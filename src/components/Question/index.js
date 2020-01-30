@@ -22,52 +22,54 @@ export default props => {
   return (
     <div className={styles.root} onChange={handleChange}>
       {text && <h2 className={styles.title}>{text}</h2>}
-      <input
-        type="radio"
-        id={`${questionId}-strongly-disagree`}
-        value={"strongly-disagree"}
-        name={questionId}
-      />
-      <label htmlFor={`${questionId}-strongly-disagree`}>
-        Strongly disagree
-      </label>
-      <input
-        type="radio"
-        id={`${questionId}-somewhat-disagree`}
-        name={questionId}
-        value={"somewhat-disagree"}
-      />
-      <label htmlFor={`${questionId}-somewhat-disagree`}>
-        Somewhat disagree
-      </label>
-      <input
-        type="radio"
-        id={`${questionId}-neutral`}
-        name={questionId}
-        value={"neutral"}
-      />
-      <label htmlFor={`${questionId}-neutral`}>Neutral</label>
-      <input
-        type="radio"
-        id={`${questionId}-somewhat-agree`}
-        name={questionId}
-        value={"somewhat-agree"}
-      />
-      <label htmlFor={`${questionId}-somewhat-agree`}>Somewhat agree</label>
-      <input
-        type="radio"
-        id={`${questionId}-strongly-agree`}
-        name={questionId}
-        value={"strongly-agree"}
-      />
-      <label htmlFor={`${questionId}-strongly-agree`}>Strongly agree</label>
-      <input
-        type="radio"
-        id={`${questionId}-dont-know`}
-        name={questionId}
-        value={"dont-know"}
-      />
-      <label htmlFor={`${questionId}-dont-know`}>Don't know</label>
+      <div className={styles.choices}>
+        <input
+          type="radio"
+          id={`${questionId}-strongly-disagree`}
+          value={"strongly-disagree"}
+          name={questionId}
+        />
+        <label htmlFor={`${questionId}-strongly-disagree`}>
+          Strongly disagree
+        </label>
+        <input
+          type="radio"
+          id={`${questionId}-somewhat-disagree`}
+          name={questionId}
+          value={"somewhat-disagree"}
+        />
+        <label htmlFor={`${questionId}-somewhat-disagree`}>
+          Somewhat disagree
+        </label>
+        <input
+          type="radio"
+          id={`${questionId}-neutral`}
+          name={questionId}
+          value={"neutral"}
+        />
+        <label htmlFor={`${questionId}-neutral`}>Neutral</label>
+        <input
+          type="radio"
+          id={`${questionId}-somewhat-agree`}
+          name={questionId}
+          value={"somewhat-agree"}
+        />
+        <label htmlFor={`${questionId}-somewhat-agree`}>Somewhat agree</label>
+        <input
+          type="radio"
+          id={`${questionId}-strongly-agree`}
+          name={questionId}
+          value={"strongly-agree"}
+        />
+        <label htmlFor={`${questionId}-strongly-agree`}>Strongly agree</label>
+        <input
+          type="radio"
+          id={`${questionId}-dont-know`}
+          name={questionId}
+          value={"dont-know"}
+        />
+        <label htmlFor={`${questionId}-dont-know`}>Don't know</label>
+      </div>
     </div>
   );
 };

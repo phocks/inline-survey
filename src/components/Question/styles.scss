@@ -44,6 +44,8 @@
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+    // min-height: 100px;
+    // flex: 1 1;
   }
 
   input[type="radio"]:checked + label {
@@ -66,5 +68,13 @@
 
   .title {
     margin-bottom: 1em;
+  }
+
+  .choices {
+    // display: flex;
+    // align-items: center;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-content: space-between;
   }
 }

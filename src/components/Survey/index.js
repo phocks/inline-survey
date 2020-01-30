@@ -24,7 +24,7 @@ export default props => {
     <div className={styles.root}>
       <Portal node={document.querySelector(".customise")}>
         <div className={styles.container}>
-          <div className={styles.ageChoice}>
+          <div className={styles.optionalQuestion}>
             <p>What is your age group?</p>
             <button
               className={`${styles.button} ${
@@ -81,6 +81,70 @@ export default props => {
               onClick={() => setAgeBracket("75+")}
             >
               75+
+            </button>
+          </div>
+
+          <div className={styles.optionalQuestion}>
+            <p>What is your gender?</p>
+            <button
+              className={`${styles.button} ${
+                gender === "woman" ? styles.selected : ""
+              }`}
+              onClick={() => setGender("woman")}
+            >
+              Woman
+            </button>
+            <button
+              className={`${styles.button} ${
+                gender === "man" ? styles.selected : ""
+              }`}
+              onClick={() => setGender("man")}
+            >
+              Man
+            </button>
+            <button
+              className={`${styles.button} ${
+                gender === "other" ? styles.selected : ""
+              }`}
+              onClick={() => setGender("other")}
+            >
+              Other
+            </button>
+          </div>
+
+          <div className={styles.optionalQuestion}>
+            <p>Where do you live?</p>
+            <button
+              className={`${styles.button} ${
+                region === "Inner metro" ? styles.selected : ""
+              }`}
+              onClick={() => setRegion("Inner metro")}
+            >
+              Inner metro
+            </button>
+            <button
+              className={`${styles.button} ${
+                region === "Outer metro" ? styles.selected : ""
+              }`}
+              onClick={() => setRegion("Outer metro")}
+            >
+              Outer metro
+            </button>
+            <button
+              className={`${styles.button} ${
+                region === "Regional" ? styles.selected : ""
+              }`}
+              onClick={() => setRegion("Regional")}
+            >
+              Regional
+            </button>
+            <button
+              className={`${styles.button} ${
+                region === "Rural" ? styles.selected : ""
+              }`}
+              onClick={() => setRegion("Rural")}
+            >
+              Rural
             </button>
           </div>
         </div>

@@ -17,11 +17,17 @@
   background-color: transparent;
   padding: 5px 10px;
   margin-right: 10px;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 .button.selected {
   color: white;
   background-color: black;
+}
+
+.optional-question {
+  padding-bottom: 0.5em;
 }
 
 .question-container {
