@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Portal } from "react-portal";
+
 import styles from "./styles.scss";
 import Question from "../Question";
 import Result from "../Result";
@@ -11,32 +13,27 @@ export default props => {
     setAnswers({ ...answers, ...newData });
   };
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    console.log(event.target.elements);
-  };
-
   useEffect(() => {
-    console.log(answers)
-  }, [answers]) 
+    console.log(answers);
+  }, [answers]);
 
   return (
     <div className={styles.root}>
-      <div className={styles.container}>
-      <h2 className={styles.heading}>I think I would be happier if I...</h2>
-      <form onSubmit={handleSubmit}>
+      <Portal node={document.querySelector(".money691")}>
         <Question
-          text="Had more money"
+          text="I think I would be happier if I had more money."
           questionId={"Q69_1"}
           onChange={handleChange}
         />
-        {('Q69_1' in answers) && <Result questionId={"Q69_1"} />}
+        {"Q69_1" in answers && <Result questionId={"Q69_1"} />}
+      </Portal>
+      <div className={styles.displayNone}>
         <Question
           text="Had more friends"
           questionId={"Q69_2"}
           onChange={handleChange}
         />
-        {('Q69_2' in answers) && <Result questionId={"Q69_2"} />}
+        {"Q69_2" in answers && <Result questionId={"Q69_2"} />}
         <Question
           text="Worked less"
           questionId={"Q69_3"}
@@ -77,7 +74,7 @@ export default props => {
           questionId={"Q69_10"}
           onChange={handleChange}
         />
-        {('Q69_10' in answers) && <Result questionId={"Q69_10"} />}
+        {"Q69_10" in answers && <Result questionId={"Q69_10"} />}
         <Question
           text="Took better care of myself"
           questionId={"Q69_11"}
@@ -113,9 +110,6 @@ export default props => {
           questionId={"Q69_17"}
           onChange={handleChange}
         />
-        
-        {/* <button type="submit">Submit</button> */}
-      </form>
       </div>
     </div>
   );
