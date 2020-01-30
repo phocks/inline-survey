@@ -23,6 +23,8 @@ export default props => {
 
   return (
     <div className={styles.root}>
+      <div className={styles.container}>
+      <h2 className={styles.heading}>I think I would be happier if I...</h2>
       <form onSubmit={handleSubmit}>
         <Question
           text="Had more money"
@@ -112,6 +114,7 @@ export default props => {
         />
         <button type="submit">Submit</button>
       </form>
+      </div>
     </div>
   );
 };
