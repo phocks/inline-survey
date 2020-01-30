@@ -1,18 +1,27 @@
 .root {
   .container {
-    // padding-left: 15px;
-    // padding-right: 15px;
     padding-bottom: 2em;
     margin: auto;
     max-width: 850px;
   }
-  .heading {
-    text-align: left;
-    margin-bottom: 1.5em;
-  }
   .display-none {
     display: none;
   }
+}
+
+.container {
+  font-size: 1.125rem;
+}
+
+.button {
+  background-color: transparent;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.button.selected {
+  color: white;
+  background-color: black;
 }
 
 .question-container {

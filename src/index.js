@@ -9,6 +9,7 @@ const root = document.querySelector(`[data-${PROJECT_NAME}-root]`);
 function init() {
   hashify({
     hashList: [
+      "customise",
       "money691",
       "friends692",
       "work693",

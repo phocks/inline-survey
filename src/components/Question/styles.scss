@@ -17,7 +17,7 @@
 
   $bg: #111;
   $fg: lighten($bg, 20%);
-  $borderWidth: 2px;
+  $borderWidth: 1px;
 
   input[type="radio"] {
     position: absolute;
@@ -31,10 +31,10 @@
     color: lighten($bg, 20%);
     display: inline-block;
     cursor: pointer;
-    font-weight: bold;
+    // font-weight: bold;
     padding: 5px 15px;
     border: solid $borderWidth $fg;
-    border-radius: 2px;
+    border-radius: 0px;
     margin-right: 4px;
     margin-bottom: 8px;
 
