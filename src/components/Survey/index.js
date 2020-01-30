@@ -23,31 +23,45 @@ export default props => {
   return (
     <div className={styles.root}>
       <Portal node={document.querySelector(".money691")}>
-        <Question
-          text="I think I would be happier if I had more money."
-          questionId={"Q69_1"}
-          onChange={handleChange}
-        />
-        {"Q69_1" in answers && (
-          <Result questionId={"Q69_1"} choice={answers.Q69_1} />
-        )}
+        <div className={styles.questionContainer}>
+          <Question
+            text="I think I would be happier if I had more money"
+            questionId={"Q69_1"}
+            onChange={handleChange}
+          />
+          {"Q69_1" in answers && (
+            <Result questionId={"Q69_1"} choice={answers.Q69_1} />
+          )}
+        </div>
       </Portal>
 
       <Portal node={document.querySelector(".friends692")}>
-        <Question
-          text="Had more friends"
-          questionId={"Q69_2"}
-          onChange={handleChange}
-        />
-        {"Q69_2" in answers && <Result questionId={"Q69_2"} choice={answers.Q69_2} />}
+        <div className={styles.questionContainer}>
+          <Question
+            text="I think I would be happier if I had more friends"
+            questionId={"Q69_2"}
+            onChange={handleChange}
+          />
+          {"Q69_2" in answers && (
+            <Result questionId={"Q69_2"} choice={answers.Q69_2} />
+          )}
+        </div>
+      </Portal>
+
+      <Portal node={document.querySelector(".work693")}>
+        <div className={styles.questionContainer}>
+          <Question
+            text="I think I would be happier if I worked less"
+            questionId={"Q69_3"}
+            onChange={handleChange}
+          />
+          {"Q69_3" in answers && (
+            <Result questionId={"Q69_3"} choice={answers.Q69_3} />
+          )}
+        </div>
       </Portal>
 
       <div className={styles.displayNone}>
-        <Question
-          text="Worked less"
-          questionId={"Q69_3"}
-          onChange={handleChange}
-        />
         <Question
           text="Spent more time in nature"
           questionId={"Q69_4"}

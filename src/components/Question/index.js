@@ -21,7 +21,7 @@ export default props => {
 
   return (
     <div className={styles.root} onChange={handleChange}>
-      {text && <p>{text}</p>}
+      {text && <h2 className={styles.title}>{text}</h2>}
       <input
         type="radio"
         id={`${questionId}-strongly-disagree`}

@@ -1,5 +1,5 @@
 .root {
-  text-align: left;
+  // text-align: left;
   // padding-bottom: 2em;
   margin: auto;
   max-width: 850px;
@@ -27,11 +27,12 @@
 
   label {
     font-family: ABCSans, sans-serif;
+    font-size: 1.1em;
     color: lighten($bg, 20%);
     display: inline-block;
     cursor: pointer;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border: solid $borderWidth $fg;
     border-radius: 2px;
     margin-right: 4px;
@@ -61,5 +62,9 @@
     margin: 20px;
     border-radius: 10px;
     overflow: hidden;
+  }
+
+  .title {
+    margin-bottom: 1em;
   }
 }
