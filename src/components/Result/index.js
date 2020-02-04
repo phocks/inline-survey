@@ -25,9 +25,9 @@ export default props => {
       {averages &&
         averages.map((average, iteration) => {
           return (
-            <div key={iteration}>
-              <span>{average.by_group}:</span> <span>{average.value}</span>
-            </div>
+            <span key={iteration}>
+              <span>{average.by_group}:</span> <span>{average.value}&nbsp; &nbsp;</span>
+            </span>
           );
         })}
     </div>
