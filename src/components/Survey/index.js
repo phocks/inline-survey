@@ -254,59 +254,88 @@ export default props => {
         )}
       </Portal>
 
-      <div className={styles.displayNone}>
+      <Portal node={document.querySelector(".job698")}>
         <Question
           text="I think I would be happier if had a better job"
           questionId={"Q69_8"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".travel699")}>
         <Question
           text="I think I would be happier if travelled more often"
           questionId={"Q69_9"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".community6910")}>
         <Question
           text="I think I would be happier if were more involved in my community"
           questionId={"Q69_10"}
           onChange={handleChange}
         />
-        {"Q69_10" in answers && <Result questionId={"Q69_10"} />}
+        {"Q69_10" in answers && <Result questionId={"Q69_10"} data={data} />}
+      </Portal>
+
+      <Portal node={document.querySelector(".bettercare6911")}>
         <Question
           text="I think I would be happier if took better care of myself"
           questionId={"Q69_11"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".socialise6912")}>
         <Question
           text="I think I would be happier if socialised more"
           questionId={"Q69_12"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".socialmedia6913")}>
         <Question
           text="I think I would be happier if spent less time on social media"
           questionId={"Q69_13"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".sleep6914")}>
         <Question
           text="I think I would be happier if slept more"
           questionId={"Q69_14"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".errands6915")}>
         <Question
           text="I think I would be happier if spent less time running errands and doing chores"
           questionId={"Q69_15"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".children6917")}>
         <Question
           text="I think I would be happier if had (more) children"
           questionId={"Q69_16"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".romantic6917")}>
         <Question
           text="I think I would be happier if had a more fulfilling romantic relationship"
           questionId={"Q69_17"}
           onChange={handleChange}
         />
-      </div>
+      </Portal>
+
+      <div className={styles.displayNone}></div>
     </div>
   );
 };
