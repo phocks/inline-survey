@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Portal } from "react-portal";
 import fetch from "unfetch";
 import to from "await-to-js";
+import isEmpty from "lodash.isempty";
 
 import styles from "./styles.scss";
 import Question from "../Question";
@@ -37,8 +38,14 @@ export default props => {
   }, []);
 
   useEffect(() => {
+    if (isEmpty(answers)) return;
+
     console.log(answers);
   }, [answers]);
+
+  useEffect(() => {
+    console.log()
+  })
 
   return (
     <div className={styles.root}>
