@@ -210,7 +210,7 @@ export default props => {
 
       <Portal node={document.querySelector(".nature694")}>
         <Question
-          text="Spent more time in nature"
+          text="I think I would be happier if spent more time in nature"
           questionId={"Q69_4"}
           onChange={handleChange}
         />
@@ -221,7 +221,7 @@ export default props => {
 
       <Portal node={document.querySelector(".family695")}>
         <Question
-          text="Spent more time with family"
+          text="I think I would be happier if spent more time with family"
           questionId={"Q69_5"}
           onChange={handleChange}
         />
@@ -232,7 +232,7 @@ export default props => {
 
       <Portal node={document.querySelector(".commute696")}>
         <Question
-          text="Spent less time commuting"
+          text="I think I would be happier if spent less time commuting"
           questionId={"Q69_6"}
           onChange={handleChange}
         />
@@ -244,7 +244,7 @@ export default props => {
 
       <Portal node={document.querySelector(".sex697")}>
         <Question
-          text="Had a better sex life"
+          text="I think I would be happier if had a better sex life"
           questionId={"Q69_7"}
           onChange={handleChange}
         />
@@ -256,53 +256,53 @@ export default props => {
 
       <div className={styles.displayNone}>
         <Question
-          text="Had a better job"
+          text="I think I would be happier if had a better job"
           questionId={"Q69_8"}
           onChange={handleChange}
         />
         <Question
-          text="Travelled more often"
+          text="I think I would be happier if travelled more often"
           questionId={"Q69_9"}
           onChange={handleChange}
         />
         <Question
-          text="Were more involved in my community"
+          text="I think I would be happier if were more involved in my community"
           questionId={"Q69_10"}
           onChange={handleChange}
         />
         {"Q69_10" in answers && <Result questionId={"Q69_10"} />}
         <Question
-          text="Took better care of myself"
+          text="I think I would be happier if took better care of myself"
           questionId={"Q69_11"}
           onChange={handleChange}
         />
         <Question
-          text="Socialised more"
+          text="I think I would be happier if socialised more"
           questionId={"Q69_12"}
           onChange={handleChange}
         />
         <Question
-          text="Spent less time on social media"
+          text="I think I would be happier if spent less time on social media"
           questionId={"Q69_13"}
           onChange={handleChange}
         />
         <Question
-          text="Slept more"
+          text="I think I would be happier if slept more"
           questionId={"Q69_14"}
           onChange={handleChange}
         />
         <Question
-          text="Spent less time running errands and doing chores"
+          text="I think I would be happier if spent less time running errands and doing chores"
           questionId={"Q69_15"}
           onChange={handleChange}
         />
         <Question
-          text="Had (more) children"
+          text="I think I would be happier if had (more) children"
           questionId={"Q69_16"}
           onChange={handleChange}
         />
         <Question
-          text="Had a more fulfilling romantic relationship"
+          text="I think I would be happier if had a more fulfilling romantic relationship"
           questionId={"Q69_17"}
           onChange={handleChange}
         />
