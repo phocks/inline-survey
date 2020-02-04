@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Portal } from "react-portal";
+import fetch from "unfetch";
+import to from "await-to-js";
 
 import styles from "./styles.scss";
 import Question from "../Question";
@@ -10,11 +12,29 @@ export default props => {
   const [gender, setGender] = useState();
   const [region, setRegion] = useState();
   const [answers, setAnswers] = useState({});
+  const [data, setData] = useState();
 
   const handleChange = data => {
     const newData = { [data.questionId]: data.value };
     setAnswers({ ...answers, ...newData });
   };
+
+  const init = async () => {
+    const [errFetched, fetched] = await to(
+      fetch(`${__webpack_public_path__}/data.json`).then(r => r.json())
+    );
+
+    if (errFetched) console.error(errFetched);
+
+    console.log(fetched);
+
+    setData(fetched);
+  };
+
+  // Init effect
+  useEffect(() => {
+    init();
+  }, []);
 
   useEffect(() => {
     console.log(answers);
@@ -157,7 +177,7 @@ export default props => {
             onChange={handleChange}
           />
           {"Q69_1" in answers && (
-            <Result questionId={"Q69_1"} choice={answers.Q69_1} />
+            <Result questionId={"Q69_1"} choice={answers.Q69_1} data={data} />
           )}
         </div>
       </Portal>
@@ -170,7 +190,7 @@ export default props => {
             onChange={handleChange}
           />
           {"Q69_2" in answers && (
-            <Result questionId={"Q69_2"} choice={answers.Q69_2} />
+            <Result questionId={"Q69_2"} choice={answers.Q69_2} data={data} />
           )}
         </div>
       </Portal>
@@ -183,7 +203,7 @@ export default props => {
             onChange={handleChange}
           />
           {"Q69_3" in answers && (
-            <Result questionId={"Q69_3"} choice={answers.Q69_3} />
+            <Result questionId={"Q69_3"} choice={answers.Q69_3} data={data} />
           )}
         </div>
       </Portal>
@@ -195,16 +215,22 @@ export default props => {
           onChange={handleChange}
         />
         {"Q69_4" in answers && (
-          <Result questionId={"Q69_4"} choice={answers.Q69_4} />
+          <Result questionId={"Q69_4"} choice={answers.Q69_4} data={data} />
         )}
       </Portal>
 
-      <div className={styles.displayNone}>
+      <Portal node={document.querySelector(".family695")}>
         <Question
           text="Spent more time with family"
           questionId={"Q69_5"}
           onChange={handleChange}
         />
+        {"Q69_5" in answers && (
+          <Result questionId={"Q69_5"} choice={answers.Q69_5} data={data} />
+        )}
+      </Portal>
+
+      <div className={styles.displayNone}>
         <Question
           text="Spent less time commuting"
           questionId={"Q69_6"}

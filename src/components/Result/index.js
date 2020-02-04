@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.scss";
 
-import data from "./data.json";
+// import data from "./data.json";
 
 export default props => {
-  const { questionId, choice } = props;
+  const { questionId, choice, data } = props;
 
   const [averages, setAverages] = useState();
 

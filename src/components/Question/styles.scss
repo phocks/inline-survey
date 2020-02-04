@@ -44,7 +44,7 @@
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
-    min-width: 190px;
+    // min-width: 190px;
   }
 
   input[type="radio"]:checked + label {
