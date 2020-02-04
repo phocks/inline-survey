@@ -230,17 +230,31 @@ export default props => {
         )}
       </Portal>
 
-      <div className={styles.displayNone}>
+      <Portal node={document.querySelector(".commute696")}>
         <Question
           text="Spent less time commuting"
           questionId={"Q69_6"}
           onChange={handleChange}
         />
+
+        {"Q69_6" in answers && (
+          <Result questionId={"Q69_6"} choice={answers.Q69_6} data={data} />
+        )}
+      </Portal>
+
+      <Portal node={document.querySelector(".sex697")}>
         <Question
           text="Had a better sex life"
           questionId={"Q69_7"}
           onChange={handleChange}
         />
+
+        {"Q69_7" in answers && (
+          <Result questionId={"Q69_7"} choice={answers.Q69_7} data={data} />
+        )}
+      </Portal>
+
+      <div className={styles.displayNone}>
         <Question
           text="Had a better job"
           questionId={"Q69_8"}
