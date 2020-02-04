@@ -8,6 +8,13 @@
   //   margin-bottom: 1em;
   // }
 
+  h2 {
+    font-family: ABCSans, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #4a4a4a;
+  }
+
   p {
     font-size: 1.125rem;
     line-height: 1.666666667;
@@ -27,7 +34,7 @@
 
   label {
     font-family: ABCSans, sans-serif;
-    font-size: 1.1em;
+    font-size: 16px;
     color: lighten($bg, 20%);
     display: inline-block;
     cursor: pointer;
