@@ -4,9 +4,12 @@
     margin: auto;
     max-width: 850px;
   }
+
   .display-none {
     display: none;
   }
+
+  
 }
 
 .container {
@@ -14,6 +17,9 @@
 }
 
 .button {
+  font-size: 13px;
+  font-family: ABCSans, sans-serif;
+  font-variant-numeric: oldstyle-nums;
   background-color: transparent;
   padding: 5px 10px;
   margin-right: 10px;
@@ -28,6 +34,10 @@
 
 .optional-question {
   padding-bottom: 0.5em;
+  
+  p {
+    margin-top: 1em;
+  }
 }
 
 .question-container {

@@ -15,7 +15,7 @@
     margin-bottom: 2.25rem;
   }
 
-  $bg: #111;
+  $bg: black;
   $fg: lighten($bg, 20%);
   $borderWidth: 1px;
 
@@ -48,8 +48,8 @@
   }
 
   input[type="radio"]:checked + label {
-    color: lighten($bg, 80%);
-    background: $fg;
+    color: white;
+    background: $bg;
   }
 
   // label + input[type="radio"] + label {
