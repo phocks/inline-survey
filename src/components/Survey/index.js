@@ -44,8 +44,8 @@ export default props => {
   }, [answers]);
 
   useEffect(() => {
-    console.log()
-  })
+    console.log("Optional: ", ageBracket, gender, region);
+  }, [ageBracket, gender, region]);
 
   return (
     <div className={styles.root}>
@@ -277,11 +277,7 @@ export default props => {
           onChange={handleChange}
         />
         {"Q69_9" in answers && (
-          <Result
-            questionId={"Q69_9"}
-            choice={answers.Q69_9}
-            data={data}
-          />
+          <Result questionId={"Q69_9"} choice={answers.Q69_9} data={data} />
         )}
       </Portal>
 
