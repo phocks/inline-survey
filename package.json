@@ -12,10 +12,18 @@
   },
   "scripts": {
     "start": "aunty serve",
-    "test": "aunty test"
+    "test": "aunty test",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@abcnews/aunty": "^10.8.0",
+    "@babel/core": "^7.8.4",
+    "@storybook/addon-actions": "^5.3.12",
+    "@storybook/addon-links": "^5.3.12",
+    "@storybook/addons": "^5.3.12",
+    "@storybook/react": "^5.3.12",
+    "babel-loader": "^8.0.6",
     "react-test-renderer": "^16.12.0"
   },
   "dependencies": {
