@@ -30,7 +30,7 @@ export default props => {
           name={questionId}
         />
         <label htmlFor={`${questionId}-strongly-disagree`}>
-          Strongly disagree
+          Strongly<br />disagree
         </label>
         <input
           type="radio"
@@ -39,7 +39,7 @@ export default props => {
           value={"somewhat-disagree"}
         />
         <label htmlFor={`${questionId}-somewhat-disagree`}>
-          Somewhat disagree
+          Somewhat<br />disagree
         </label>
         <input
           type="radio"
@@ -54,21 +54,21 @@ export default props => {
           name={questionId}
           value={"somewhat-agree"}
         />
-        <label htmlFor={`${questionId}-somewhat-agree`}>Somewhat agree</label>
+        <label htmlFor={`${questionId}-somewhat-agree`}>Somewhat<br />agree</label>
         <input
           type="radio"
           id={`${questionId}-strongly-agree`}
           name={questionId}
           value={"strongly-agree"}
         />
-        <label htmlFor={`${questionId}-strongly-agree`}>Strongly agree</label>
+        <label htmlFor={`${questionId}-strongly-agree`}>Strongly<br />agree</label>
         <input
           type="radio"
           id={`${questionId}-dont-know`}
           name={questionId}
           value={"dont-know"}
         />
-        <label htmlFor={`${questionId}-dont-know`}>Don't know</label>
+        <label className={styles.dontKnow} htmlFor={`${questionId}-dont-know`}>Don&rsquo;t<br />know</label>
       </div>
     </div>
   );
