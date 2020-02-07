@@ -179,6 +179,7 @@ export default props => {
       <Portal node={document.querySelector(".money691")}>
         <div className={styles.questionContainer}>
           <Question
+            pre="What do you think?"
             text="I think I would be happier if I had more money"
             questionId={"Q69_1"}
             onChange={handleChange}

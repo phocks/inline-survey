@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.scss";
 
 export default props => {
-  const { text, questionId = "default", onChange } = props;
+  const { pre, text, questionId = "default", onChange } = props;
 
   const handleChange = event => {
     const answer = event.target.value;
@@ -21,6 +21,7 @@ export default props => {
 
   return (
     <div className={styles.root} onChange={handleChange}>
+      {pre && <div className={styles.pre}>{pre}</div>}
       {text && <h2 className={styles.title}>{text}</h2>}
       <div className={styles.choices}>
         <input
