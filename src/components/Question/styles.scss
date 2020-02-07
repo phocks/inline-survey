@@ -1,3 +1,5 @@
+@import "../../sass/breakpoints.scss";
+
 .root {
   // text-align: left;
   // padding-bottom: 2em;
@@ -64,6 +66,10 @@
     background-color: white;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.08),
       0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+
+    @include for-size(desktop-up) {
+      // background-color: red;
+    }
   }
 
   label:last-child {
