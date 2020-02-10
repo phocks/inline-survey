@@ -69,7 +69,9 @@ export default props => {
           name={questionId}
           value={"dont-know"}
         />
-        <label className={styles.dontKnow} htmlFor={`${questionId}-dont-know`}>Don&rsquo;t know</label>
+        <label className={styles.dontKnow} htmlFor={`${questionId}-dont-know`}>
+          Don&rsquo;t know
+        </label>
       </div>
     </div>
   );

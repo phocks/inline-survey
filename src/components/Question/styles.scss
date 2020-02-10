@@ -8,7 +8,6 @@
   h2 {
     font-family: ABCSerif, serif;
     font-size: 18px;
-    // text-transform: uppercase;
     color: black;
   }
 
@@ -18,10 +17,6 @@
     margin-top: 0;
     margin-bottom: 2.25rem;
   }
-
-  // $bg: black;
-  // $fg: lighten($bg, 20%);
-  // $borderWidth: 1px;
 
   .pre {
     text-align: center;
@@ -38,7 +33,6 @@
     flex-direction: column;
 
     @include for-size(tablet-portrait-up) {
-      // display: flex;
       flex-direction: row;
       align-items: center;
       flex-wrap: nowrap;
@@ -95,13 +89,13 @@
     // }
   }
 
-  label:last-child {
+  // label:last-child {
     // @include for-size(tablet-portrait-up) {
     //   margin-right: 0;
     // }
     // @include for-size(desktop-up) {
 
-  }
+  // }
 
   input[type="radio"]:checked + label {
     color: white;
@@ -114,19 +108,6 @@
       border-color: black;
     }
   }
-
-  // label + input[type="radio"] + label {
-  //   // border-left: solid $borderWidth $fg;
-  //   margin-left: 4px
-  // }
-
-  // .radio-group {
-  //   border: solid 1px black;
-  //   display: inline-block;
-  //   margin: 20px;
-  //   border-radius: 10px;
-  //   overflow: hidden;
-  // }
 
   .title {
     text-align: center;
