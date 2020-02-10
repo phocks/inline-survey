@@ -1,9 +1,33 @@
 .root {
   text-align: left;
-  position: relative;
-  
 
-  .you-said {
+  .key {
+    font-family: ABCSans, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    color: #757575;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+
+    span {
+      min-width: 110px;
+    }
+
+    .mid {
+      text-align: center;
+    }
+
+    .right {
+      text-align: right;
+    }
+  }
+
+  .line {
+    position: relative;
+    margin-bottom: 1.5em;
+
     .text {
       font-family: ABCSans, sans-serif;
     }
@@ -12,6 +36,19 @@
   .mid-bar {
     height: 2px;
     background-color: #d8d8d8;
+  }
+
+  .dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    background-color: #0081AE;
+    border-radius: 50%;
+    transition: left 0.75s;
   }
 
   .your-dot {

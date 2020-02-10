@@ -28,8 +28,6 @@ export default props => {
 
     if (errFetched) console.error(errFetched);
 
-    console.log(fetched);
-
     setData(fetched);
   };
 
@@ -176,7 +174,8 @@ export default props => {
             </button>
           </div>
         </div>
-        <br /><br />
+        <br />
+        <br />
         <Chart />
       </Portal>
       <Portal node={document.querySelector(".money691")}>
