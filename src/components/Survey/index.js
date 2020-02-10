@@ -7,6 +7,7 @@ import isEmpty from "lodash.isempty";
 import styles from "./styles.scss";
 import Question from "../Question";
 import Result from "../Result";
+import Chart from "../Chart";
 
 export default props => {
   const [ageBracket, setAgeBracket] = useState();
@@ -175,6 +176,8 @@ export default props => {
             </button>
           </div>
         </div>
+        <br /><br />
+        <Chart />
       </Portal>
       <Portal node={document.querySelector(".money691")}>
         <div className={styles.questionContainer}>

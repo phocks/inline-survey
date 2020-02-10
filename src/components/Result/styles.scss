@@ -1,6 +1,28 @@
 .root {
-  // background-color: #eee;
-  // min-height: 50px;
   text-align: left;
-  // margin-bottom: 2em;
+  position: relative;
+  
+
+  .you-said {
+    .text {
+      font-family: ABCSans, sans-serif;
+    }
+  }
+
+  .mid-bar {
+    height: 2px;
+    background-color: #d8d8d8;
+  }
+
+  .your-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    background-color: #ff6100;
+    border-radius: 50%;
+  }
 }
