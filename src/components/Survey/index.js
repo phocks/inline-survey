@@ -350,7 +350,7 @@ export default props => {
         )}
       </Portal>
 
-      <Portal node={document.querySelector(".children6917")}>
+      <Portal node={document.querySelector(".children6916")}>
         <Question
           text="I think I would be happier if had (more) children"
           questionId={"Q69_16"}
