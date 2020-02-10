@@ -22,7 +22,8 @@
     top: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
-    background-color: #ff6100;
+    background-color: black;
     border-radius: 50%;
+    transition: left 0.75s;
   }
 }

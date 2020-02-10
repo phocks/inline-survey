@@ -28,7 +28,12 @@ export default props => {
       <div className={styles.youSaid}>
         {/* <div className={styles.text}>You said</div> */}
         <div className={styles.midBar}></div>
-        <div className={styles.yourDot}></div>
+        {choice !== 0 && (
+          <div
+            className={styles.yourDot}
+            style={{ left: `${scale(choice)}%` }}
+          ></div>
+        )}
       </div>
     </div>
   );
