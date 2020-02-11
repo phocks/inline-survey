@@ -24,13 +24,23 @@
     }
   }
 
-  .line {
+  .line-container {
     position: relative;
-    margin-bottom: 1.5em;
 
     .text {
+      position: relative;
       font-family: ABCSans, sans-serif;
+      display: inline-block;
+      transform: translateX(-50%);
+      color: #0081AE;
+      font-weight: bold;
     }
+  }
+
+  .line {
+    position: relative;
+    margin-top: 0.6em;
+    margin-bottom: 1.5em;
   }
 
   .mid-bar {
@@ -46,9 +56,8 @@
     top: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
-    background-color: #0081AE;
+    background-color: #0081ae;
     border-radius: 50%;
-    transition: left 0.75s;
   }
 
   .your-dot {
@@ -61,6 +70,6 @@
     transform: translateY(-50%) translateX(-50%);
     background-color: black;
     border-radius: 50%;
-    transition: left 0.75s;
+    // transition: left 0.75s;
   }
 }

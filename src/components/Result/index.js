@@ -34,25 +34,47 @@ export default props => {
         <span className={styles.right}>AGREE MORE</span>
       </div>
 
-      <div className={styles.line}>
-        {/* <div className={styles.text}>You said</div> */}
-        <div className={styles.midBar}></div>
-        {choice !== 0 && (
-          <div
-            className={styles.yourDot}
-            style={{ left: `${scale(choice)}%` }}
-          ></div>
-        )}
+      <div className={styles.lineContainer}>
+        <div
+          className={styles.text}
+          style={{
+            left: `${scale(choice)}%`,
+            opacity: `${choice === 0 ? 0.0 : 1.0}`,
+            color: "black",
+            fontWeight: "900"
+          }}
+        >
+          You said
+        </div>
+
+        <div className={styles.line}>
+          <div className={styles.midBar}></div>
+          {choice !== 0 && (
+            <div
+              className={styles.yourDot}
+              style={{ left: `${scale(choice)}%` }}
+            ></div>
+          )}
+        </div>
       </div>
+
       {averages &&
         averages.map((average, iteration) => {
           return (
-            <div className={styles.line} key={iteration}>
-              <div className={styles.midBar}></div>
+            <div key={iteration} className={styles.lineContainer}>
               <div
-                className={styles.dot}
+                className={styles.text}
                 style={{ left: `${scale(average.value)}%` }}
-              ></div>
+              >
+                {average.by_group}
+              </div>
+              <div className={styles.line}>
+                <div className={styles.midBar}></div>
+                <div
+                  className={styles.dot}
+                  style={{ left: `${scale(average.value)}%` }}
+                ></div>
+              </div>
             </div>
             // <line
             //   key={iteration}

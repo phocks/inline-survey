@@ -610,5 +610,41 @@
     "value": 2.03,
     "QID": "Q69_16",
     "Group": "age_report"
+  },
+  {
+    "by_group": "Overall",
+    "value": 3.03,
+    "QID": "Q69_17",
+    "Group": "overall_report"
+  },
+  {
+    "by_group": "18-29",
+    "value": 3.43,
+    "QID": "Q69_17",
+    "Group": "age_report"
+  },
+  {
+    "by_group": "30-39",
+    "value": 3.06,
+    "QID": "Q69_17",
+    "Group": "age_report"
+  },
+  {
+    "by_group": "40-49",
+    "value": 3.08,
+    "QID": "Q69_17",
+    "Group": "age_report"
+  },
+  {
+    "by_group": "50-64",
+    "value": 2.94,
+    "QID": "Q69_17",
+    "Group": "age_report"
+  },
+  {
+    "by_group": "65+",
+    "value": 2.71,
+    "QID": "Q69_17",
+    "Group": "age_report"
   }
 ]
