@@ -20,6 +20,7 @@ export default props => {
     });
 
     console.log(filtered);
+    // filtered.sort((a, b) => (a.value < b.value ? 1 : -1));
     setAverages(filtered);
 
     // TODO: further filter this by only relevant

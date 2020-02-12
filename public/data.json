@@ -546,12 +546,6 @@
     "Group": "age_report"
   },
   {
-    "by_group": "Overall",
-    "value": 2.13,
-    "QID": "Q69_16",
-    "Group": "overall_report"
-  },
-  {
     "by_group": "Catholic",
     "value": 2.29,
     "QID": "Q69_16",
