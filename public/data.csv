@@ -1,0 +1,116 @@
+by_group,value,QID,Group
+Average,3.9,Q69_1,Responses by age
+18-29,4.13,Q69_1,Responses by age
+30-39,4.1,Q69_1,Responses by age
+40-49,4.05,Q69_1,Responses by age
+50-64,3.8,Q69_1,Responses by age
+65+,3.48,Q69_1,Responses by age
+Average,3.9,Q69_1,Responses by income
+$0 to $599 per week,3.98,Q69_1,Responses by income
+"$600 to $1,000 per week",3.86,Q69_1,Responses by income
+"$1,000 to 1,499 per week",3.92,Q69_1,Responses by income
+"$1,500 to $2,499 per week",3.93,Q69_1,Responses by income
+"$2,500 to $2,999 per week",3.9,Q69_1,Responses by income
+"$3,000 or more per week",3.8,Q69_1,Responses by income
+Average,3.03,Q69_2,Responses by age
+18-29,3.22,Q69_2,Responses by age
+30-39,3.04,Q69_2,Responses by age
+40-49,3.07,Q69_2,Responses by age
+50-64,2.95,Q69_2,Responses by age
+65+,2.9,Q69_2,Responses by age
+Average,3.28,Q69_3,Responses by income
+$0 to $599 per week,2.69,Q69_3,Responses by income
+"$600 to $1,000 per week",3.06,Q69_3,Responses by income
+"$1,000 to 1,499 per week",3.2,Q69_3,Responses by income
+"$1,500 to $2,499 per week",3.46,Q69_3,Responses by income
+"$2,500 to $2,999 per week",3.55,Q69_3,Responses by income
+"$3,000 or more per week",3.57,Q69_3,Responses by income
+Average,4.04,Q69_4,Responses by State/Territory
+Australian Capital Territory,3.98,Q69_4,Responses by State/Territory
+New South Wales,4.05,Q69_4,Responses by State/Territory
+Northern Territory,4.01,Q69_4,Responses by State/Territory
+Queensland,4.02,Q69_4,Responses by State/Territory
+South Australia,4.09,Q69_4,Responses by State/Territory
+Tasmania,3.93,Q69_4,Responses by State/Territory
+Victoria,4.04,Q69_4,Responses by State/Territory
+Western Australia,4.09,Q69_4,Responses by State/Territory
+Average,3.69,Q69_5,Responses by religion
+Catholic,3.85,Q69_5,Responses by religion
+Other religion,3.84,Q69_5,Responses by religion
+Protestant,3.73,Q69_5,Responses by religion
+No religion,3.61,Q69_5,Responses by religion
+Average,3.03,Q69_6,Responses by region
+Outer Metro,3.22,Q69_6,Responses by region
+Inner Metro,3.1,Q69_6,Responses by region
+Regional,2.75,Q69_6,Responses by region
+Rural,2.58,Q69_6,Responses by region
+Average,3.3,Q69_7,Responses by sex
+Women,3.03,Q69_7,Responses by sex
+Men,3.58,Q69_7,Responses by sex
+Average,3.26,Q69_8,Responses by age
+18-29,3.82,Q69_8,Responses by age
+30-39,3.48,Q69_8,Responses by age
+40-49,3.41,Q69_8,Responses by age
+50-64,3.03,Q69_8,Responses by age
+65+,2.57,Q69_8,Responses by age
+Average,3.94,Q69_9,Responses by age
+18-29,4.17,Q69_9,Responses by age
+30-39,4.11,Q69_9,Responses by age
+40-49,4.11,Q69_9,Responses by age
+50-64,3.88,Q69_9,Responses by age
+65+,3.49,Q69_9,Responses by age
+Average,3.34,Q69_10,Responses by region
+Inner Metro,3.5,Q69_10,Responses by region
+Outer Metro,3.34,Q69_10,Responses by region
+Regional,3.28,Q69_10,Responses by region
+Rural,3.16,Q69_10,Responses by region
+Average,3.34,Q69_10,Responses by vote at 2019 election
+Greens,3.59,Q69_10,Responses by vote at 2019 election
+ALP,3.44,Q69_10,Responses by vote at 2019 election
+Other party,3.3,Q69_10,Responses by vote at 2019 election
+LNP,3.24,Q69_10,Responses by vote at 2019 election
+One Nation,3.02,Q69_10,Responses by vote at 2019 election
+Average,3.7,Q69_11,Responses by age
+18-29,4.12,Q69_11,Responses by age
+30-39,4.04,Q69_11,Responses by age
+40-49,3.87,Q69_11,Responses by age
+50-64,3.53,Q69_11,Responses by age
+65+,3.08,Q69_11,Responses by age
+Average,3.48,Q69_12,Responses by region
+Inner Metro,3.57,Q69_12,Responses by region
+Outer Metro,3.53,Q69_12,Responses by region
+Regional,3.39,Q69_12,Responses by region
+Rural,3.29,Q69_12,Responses by region
+Average,3.15,Q69_13,Responses by age
+18-29,3.64,Q69_13,Responses by age
+30-39,3.47,Q69_13,Responses by age
+40-49,3.23,Q69_13,Responses by age
+50-64,2.87,Q69_13,Responses by age
+65+,2.67,Q69_13,Responses by age
+Average,3.65,Q69_14,Responses by age
+18-29,3.96,Q69_14,Responses by age
+30-39,3.98,Q69_14,Responses by age
+40-49,3.79,Q69_14,Responses by age
+50-64,3.52,Q69_14,Responses by age
+65+,3.13,Q69_14,Responses by age
+Average,3.13,Q69_15,Responses by income
+$0 to $599 per week,2.86,Q69_15,Responses by income
+"$600 to $1,000 per week",3,Q69_15,Responses by income
+"$1,000 to 1,499 per week",3.04,Q69_15,Responses by income
+"$1,500 to $2,499 per week",3.25,Q69_15,Responses by income
+"$2,500 to $2,999 per week",3.24,Q69_15,Responses by income
+"$3,000 or more per week",3.25,Q69_15,Responses by income
+Average,2.13,Q69_16,Responses by sex
+Women,2.02,Q69_16,Responses by sex
+Men,2.23,Q69_16,Responses by sex
+Average,2.13,Q69_16,Responses by religion
+Catholic,2.29,Q69_16,Responses by religion
+No religion,2.02,Q69_16,Responses by religion
+Other religion,2.35,Q69_16,Responses by religion
+Protestant,2.18,Q69_16,Responses by religion
+Average,3.03,Q69_17,Responses by age
+18-29,3.43,Q69_17,Responses by age
+30-39,3.06,Q69_17,Responses by age
+40-49,3.08,Q69_17,Responses by age
+50-64,2.94,Q69_17,Responses by age
+65+,2.71,Q69_17,Responses by age
