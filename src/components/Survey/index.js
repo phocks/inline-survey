@@ -40,137 +40,6 @@ export default props => {
 
   return (
     <div className={styles.root}>
-      {/* <Portal node={document.querySelector(".customise")}>
-        <div className={styles.container}>
-          <div className={styles.optionalQuestion}>
-            <p>What is your age group?</p>
-            <button
-              className={`${styles.button} ${
-                ageBracket === "18-24" ? styles.selected : ""
-              }`}
-              onClick={() => setAgeBracket("18-24")}
-            >
-              18-24
-            </button>
-            <button
-              className={`${styles.button} ${
-                ageBracket === "25-29" ? styles.selected : ""
-              }`}
-              onClick={() => setAgeBracket("25-29")}
-            >
-              25-29
-            </button>
-            <button
-              className={`${styles.button} ${
-                ageBracket === "30-39" ? styles.selected : ""
-              }`}
-              onClick={() => setAgeBracket("30-39")}
-            >
-              30-39
-            </button>
-            <button
-              className={`${styles.button} ${
-                ageBracket === "40-49" ? styles.selected : ""
-              }`}
-              onClick={() => setAgeBracket("40-49")}
-            >
-              40-49
-            </button>
-            <button
-              className={`${styles.button} ${
-                ageBracket === "50-64" ? styles.selected : ""
-              }`}
-              onClick={() => setAgeBracket("50-64")}
-            >
-              50-64
-            </button>
-            <button
-              className={`${styles.button} ${
-                ageBracket === "65-74" ? styles.selected : ""
-              }`}
-              onClick={() => setAgeBracket("65-74")}
-            >
-              65-74
-            </button>
-            <button
-              className={`${styles.button} ${
-                ageBracket === "75+" ? styles.selected : ""
-              }`}
-              onClick={() => setAgeBracket("75+")}
-            >
-              75+
-            </button>
-          </div>
-
-          <div className={styles.optionalQuestion}>
-            <p>What is your gender?</p>
-            <button
-              className={`${styles.button} ${
-                gender === "woman" ? styles.selected : ""
-              }`}
-              onClick={() => setGender("woman")}
-            >
-              Woman
-            </button>
-            <button
-              className={`${styles.button} ${
-                gender === "man" ? styles.selected : ""
-              }`}
-              onClick={() => setGender("man")}
-            >
-              Man
-            </button>
-            <button
-              className={`${styles.button} ${
-                gender === "other" ? styles.selected : ""
-              }`}
-              onClick={() => setGender("other")}
-            >
-              Other
-            </button>
-          </div>
-
-          <div className={styles.optionalQuestion}>
-            <p>Where do you live?</p>
-            <button
-              className={`${styles.button} ${
-                region === "Inner metro" ? styles.selected : ""
-              }`}
-              onClick={() => setRegion("Inner metro")}
-            >
-              Inner metro
-            </button>
-            <button
-              className={`${styles.button} ${
-                region === "Outer metro" ? styles.selected : ""
-              }`}
-              onClick={() => setRegion("Outer metro")}
-            >
-              Outer metro
-            </button>
-            <button
-              className={`${styles.button} ${
-                region === "Regional" ? styles.selected : ""
-              }`}
-              onClick={() => setRegion("Regional")}
-            >
-              Regional
-            </button>
-            <button
-              className={`${styles.button} ${
-                region === "Rural" ? styles.selected : ""
-              }`}
-              onClick={() => setRegion("Rural")}
-            >
-              Rural
-            </button>
-          </div>
-        </div>
-        <br />
-        <br />
-        <Chart />
-      </Portal> */}
-
       <Portal node={document.querySelector(".money691")}>
         <div className={styles.questionContainer}>
           <Question
@@ -369,3 +238,134 @@ export default props => {
     </div>
   );
 };
+
+/* <Portal node={document.querySelector(".customise")}>
+        <div className={styles.container}>
+          <div className={styles.optionalQuestion}>
+            <p>What is your age group?</p>
+            <button
+              className={`${styles.button} ${
+                ageBracket === "18-24" ? styles.selected : ""
+              }`}
+              onClick={() => setAgeBracket("18-24")}
+            >
+              18-24
+            </button>
+            <button
+              className={`${styles.button} ${
+                ageBracket === "25-29" ? styles.selected : ""
+              }`}
+              onClick={() => setAgeBracket("25-29")}
+            >
+              25-29
+            </button>
+            <button
+              className={`${styles.button} ${
+                ageBracket === "30-39" ? styles.selected : ""
+              }`}
+              onClick={() => setAgeBracket("30-39")}
+            >
+              30-39
+            </button>
+            <button
+              className={`${styles.button} ${
+                ageBracket === "40-49" ? styles.selected : ""
+              }`}
+              onClick={() => setAgeBracket("40-49")}
+            >
+              40-49
+            </button>
+            <button
+              className={`${styles.button} ${
+                ageBracket === "50-64" ? styles.selected : ""
+              }`}
+              onClick={() => setAgeBracket("50-64")}
+            >
+              50-64
+            </button>
+            <button
+              className={`${styles.button} ${
+                ageBracket === "65-74" ? styles.selected : ""
+              }`}
+              onClick={() => setAgeBracket("65-74")}
+            >
+              65-74
+            </button>
+            <button
+              className={`${styles.button} ${
+                ageBracket === "75+" ? styles.selected : ""
+              }`}
+              onClick={() => setAgeBracket("75+")}
+            >
+              75+
+            </button>
+          </div>
+
+          <div className={styles.optionalQuestion}>
+            <p>What is your gender?</p>
+            <button
+              className={`${styles.button} ${
+                gender === "woman" ? styles.selected : ""
+              }`}
+              onClick={() => setGender("woman")}
+            >
+              Woman
+            </button>
+            <button
+              className={`${styles.button} ${
+                gender === "man" ? styles.selected : ""
+              }`}
+              onClick={() => setGender("man")}
+            >
+              Man
+            </button>
+            <button
+              className={`${styles.button} ${
+                gender === "other" ? styles.selected : ""
+              }`}
+              onClick={() => setGender("other")}
+            >
+              Other
+            </button>
+          </div>
+
+          <div className={styles.optionalQuestion}>
+            <p>Where do you live?</p>
+            <button
+              className={`${styles.button} ${
+                region === "Inner metro" ? styles.selected : ""
+              }`}
+              onClick={() => setRegion("Inner metro")}
+            >
+              Inner metro
+            </button>
+            <button
+              className={`${styles.button} ${
+                region === "Outer metro" ? styles.selected : ""
+              }`}
+              onClick={() => setRegion("Outer metro")}
+            >
+              Outer metro
+            </button>
+            <button
+              className={`${styles.button} ${
+                region === "Regional" ? styles.selected : ""
+              }`}
+              onClick={() => setRegion("Regional")}
+            >
+              Regional
+            </button>
+            <button
+              className={`${styles.button} ${
+                region === "Rural" ? styles.selected : ""
+              }`}
+              onClick={() => setRegion("Rural")}
+            >
+              Rural
+            </button>
+          </div>
+        </div>
+        <br />
+        <br />
+        <Chart />
+      </Portal> */

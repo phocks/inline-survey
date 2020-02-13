@@ -8,7 +8,8 @@ import styles from "./styles.scss";
 export default props => {
   const { questionId, choice, data } = props;
 
-  const [averages, setAverages] = useState();
+  const [averages, setAverages] = useState([]);
+  // const [grow, setGrow] = useState()
 
   const scale = scaleLinear()
     .domain([1, 5])
@@ -23,12 +24,15 @@ export default props => {
     // filtered.sort((a, b) => (a.value < b.value ? 1 : -1));
     setAverages(filtered);
 
+    // setTimeout(() => setGrow(true), 10 )
+
     // TODO: further filter this by only relevant
     // qns in an array eg. ["age_report", "overall_report"]
   }, []);
 
   return (
     <div className={styles.root}>
+      {/* <div className={styles.root} style={{maxHeight: grow ? `${averages.length * 50}px` : "0px"}}> */}
       <div className={styles.key}>
         <span className={styles.left}>AGREE LESS</span>
         <span className={styles.mid}>NEUTRAL</span>
