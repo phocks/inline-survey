@@ -100,6 +100,9 @@ $0 to $599 per week,2.86,Q69_15,Responses by income
 "$1,500 to $2,499 per week",3.25,Q69_15,Responses by income
 "$2,500 to $2,999 per week",3.24,Q69_15,Responses by income
 "$3,000 or more per week",3.25,Q69_15,Responses by income
+Overall,3.13,Q69_15,Responses by sex
+Women,3.23,Q69_15,Responses by sex
+Men,3.03,Q69_15,Responses by sex
 Average,2.13,Q69_16,Responses by sex
 Women,2.02,Q69_16,Responses by sex
 Men,2.23,Q69_16,Responses by sex
