@@ -7,12 +7,8 @@ import isEmpty from "lodash.isempty";
 import styles from "./styles.scss";
 import Question from "../Question";
 import Result from "../Result";
-import Chart from "../Chart";
 
 export default props => {
-  const [ageBracket, setAgeBracket] = useState();
-  const [gender, setGender] = useState();
-  const [region, setRegion] = useState();
   const [answers, setAnswers] = useState({});
   const [data, setData] = useState();
 
@@ -42,13 +38,9 @@ export default props => {
     console.log(answers);
   }, [answers]);
 
-  useEffect(() => {
-    console.log("Optional: ", ageBracket, gender, region);
-  }, [ageBracket, gender, region]);
-
   return (
     <div className={styles.root}>
-      <Portal node={document.querySelector(".customise")}>
+      {/* <Portal node={document.querySelector(".customise")}>
         <div className={styles.container}>
           <div className={styles.optionalQuestion}>
             <p>What is your age group?</p>
@@ -177,7 +169,8 @@ export default props => {
         <br />
         <br />
         <Chart />
-      </Portal>
+      </Portal> */}
+
       <Portal node={document.querySelector(".money691")}>
         <div className={styles.questionContainer}>
           <Question
