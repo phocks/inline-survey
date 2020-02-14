@@ -76,6 +76,8 @@ export default props => {
     element.setAttribute("data-collapsed", "false");
   }
 
+  let previousGroup = null;
+
   return (
     <div className={styles.root}>
       {/* <div className={styles.root} style={{maxHeight: grow ? `${averages.length * 50}px` : "0px"}}> */}
@@ -111,8 +113,18 @@ export default props => {
 
       {averages &&
         averages.map((average, iteration) => {
+          let groupHeading;
+
+          if (previousGroup !== average.Group) {
+            console.log(average.Group);
+            groupHeading = average.Group;
+          }
+
+          previousGroup = average.Group;
+
           return (
             <div key={iteration} className={styles.lineContainer}>
+              {groupHeading && <p>{groupHeading}</p>}
               <div
                 className={styles.text}
                 style={{ left: `${scale(average.value)}%` }}
