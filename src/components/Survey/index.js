@@ -48,9 +48,10 @@ export default props => {
             questionId={"Q69_1"}
             onChange={handleChange}
           />
-          {"Q69_1" in answers && (
+          {/* {"Q69_1" in answers && ( */}
+            {data && (
             <Result questionId={"Q69_1"} choice={answers.Q69_1} data={data} />
-          )}
+           )} 
         </div>
       </Portal>
 
