@@ -31,10 +31,20 @@ function init() {
     ]
   });
 
+  // Set header background color
+  const headerDesktopEl = document.querySelector(".Header");
+  headerDesktopEl.style.background = "#ffd587";
+
   render(<App projectName={PROJECT_NAME} />, root);
 }
 
-init();
+if (window.__ODYSSEY__) {
+  init(window.__ODYSSEY__);
+} else {
+  window.addEventListener("odyssey:api", e => {
+    init(e.detail);
+  });
+}
 
 if (module.hot) {
   module.hot.accept("./components/App", () => {
