@@ -38,6 +38,7 @@ function init() {
   render(<App projectName={PROJECT_NAME} />, root);
 }
 
+// Wait for Odyssey then call init
 if (window.__ODYSSEY__) {
   init(window.__ODYSSEY__);
 } else {
