@@ -116,7 +116,6 @@ export default props => {
           let groupHeading;
 
           if (previousGroup !== average.Group) {
-            console.log(average.Group);
             groupHeading = average.Group;
           }
 

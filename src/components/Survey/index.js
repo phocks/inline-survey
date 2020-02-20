@@ -8,13 +8,42 @@ import styles from "./styles.scss";
 import Question from "../Question";
 import Result from "../Result";
 
+import { hasClass, addClass, removeClass } from "../../lib/utils";
+
+const hashLookup = {
+  Q69_1: "money691",
+  Q69_8: "job698",
+  Q69_11: "bettercare6911",
+  Q69_14: "sleep6914",
+  Q69_12: "socialise6912",
+  Q69_10: "community6910",
+  Q69_2: "friends692",
+  Q69_5: "family695",
+  Q69_16: "children6916",
+  Q69_17: "romantic6917",
+  Q69_7: "sex697",
+  Q69_3: "work693",
+  Q69_15: "errands6915",
+  Q69_6: "commute696",
+  Q69_13: "socialmedia6913",
+  Q69_9: "travel699",
+  Q69_4: "nature694"
+};
+
 export default props => {
   const [answers, setAnswers] = useState({});
   const [data, setData] = useState();
 
   const handleChange = data => {
-    const newData = { [data.questionId]: data.value };
+    const newData = {
+      [data.questionId]: data.value
+    };
     setAnswers({ ...answers, ...newData });
+
+    // Remove hide
+    const section = hashLookup[data.questionId];
+    let targetEl = document.querySelector("." + section);
+    removeClass(targetEl, "hide-after");
   };
 
   const init = async () => {
@@ -33,6 +62,7 @@ export default props => {
   }, []);
 
   useEffect(() => {
+    // Don't fire on mount
     if (isEmpty(answers)) return;
 
     console.log(answers);
