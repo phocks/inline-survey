@@ -7,6 +7,7 @@ import { hashify } from "spanify";
 const PROJECT_NAME = "inline-survey";
 const root = document.querySelector(`[data-${PROJECT_NAME}-root]`);
 
+// Only on page load. Not on hot reload
 function preInit() {
   // Set header background color
   const headerDesktopEl = document.querySelector(".Header");
