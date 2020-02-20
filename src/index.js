@@ -35,6 +35,23 @@ function init() {
   const headerDesktopEl = document.querySelector(".Header");
   headerDesktopEl.style.background = "#ffd587";
 
+  // Add a div before our header so we can attach animation
+  const isAlreadyAttached = document.querySelector(
+    ".storylab-header-animation"
+  );
+
+  console.log(isAlreadyAttached);
+
+  if (!isAlreadyAttached) {
+    var newEl = document.createElement("div");
+    newEl.innerHTML = ``;
+    newEl.className = "storylab-header-animation";
+
+    var ref = document.querySelector(".Header h1");
+
+    insertBefore(newEl, ref);
+  }
+
   render(<App projectName={PROJECT_NAME} />, root);
 }
 
@@ -62,4 +79,9 @@ if (module.hot) {
 
 if (process.env.NODE_ENV === "development") {
   console.debug(`[${PROJECT_NAME}] public path: ${__webpack_public_path__}`);
+}
+
+// Helper functions
+function insertBefore(el, referenceNode) {
+  referenceNode.parentNode.insertBefore(el, referenceNode);
 }
