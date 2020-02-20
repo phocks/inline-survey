@@ -46,6 +46,7 @@ function init() {
     var newEl = document.createElement("div");
     newEl.innerHTML = ``;
     newEl.className = "storylab-header-animation";
+    newEl.style.marginBottom = "0";
 
     var ref = document.querySelector(".Header h1");
 
