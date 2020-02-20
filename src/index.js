@@ -7,6 +7,28 @@ import { hashify } from "spanify";
 const PROJECT_NAME = "inline-survey";
 const root = document.querySelector(`[data-${PROJECT_NAME}-root]`);
 
+function preInit() {
+  // Set header background color
+  const headerDesktopEl = document.querySelector(".Header");
+  headerDesktopEl.style.background = "#ffd587";
+
+  // Add a div before our header so we can attach animation
+  const isAlreadyAttached = document.querySelector(
+    ".storylab-header-animation"
+  );
+
+  if (!isAlreadyAttached) {
+    var newEl = document.createElement("div");
+    newEl.innerHTML = ``;
+    newEl.className = "storylab-header-animation";
+    newEl.style.marginBottom = "0";
+
+    var ref = document.querySelector(".Header h1");
+
+    insertBefore(newEl, ref);
+  }
+}
+
 function init() {
   hashify({
     hashList: [
@@ -31,36 +53,16 @@ function init() {
     ]
   });
 
-  // Set header background color
-  const headerDesktopEl = document.querySelector(".Header");
-  headerDesktopEl.style.background = "#ffd587";
-
-  // Add a div before our header so we can attach animation
-  const isAlreadyAttached = document.querySelector(
-    ".storylab-header-animation"
-  );
-
-  console.log(isAlreadyAttached);
-
-  if (!isAlreadyAttached) {
-    var newEl = document.createElement("div");
-    newEl.innerHTML = ``;
-    newEl.className = "storylab-header-animation";
-    newEl.style.marginBottom = "0";
-
-    var ref = document.querySelector(".Header h1");
-
-    insertBefore(newEl, ref);
-  }
-
   render(<App projectName={PROJECT_NAME} />, root);
 }
 
 // Wait for Odyssey then call init
 if (window.__ODYSSEY__) {
+  preInit();
   init(window.__ODYSSEY__);
 } else {
   window.addEventListener("odyssey:api", e => {
+    preInit();
     init(e.detail);
   });
 }
