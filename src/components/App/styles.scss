@@ -12,7 +12,11 @@
 
 :global {
   // Artificially bump header animation up
- .Header-content {
+  .Header-content {
     padding-top: 0 !important;
+  }
+
+  .money691 ~ * {
+    display: none;
   }
 }

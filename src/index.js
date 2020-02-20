@@ -54,6 +54,21 @@ function init() {
     ]
   });
 
+  // Categorise sections etc
+  // const section = "money691";
+  // const moneyEl = document.querySelector("." + section);
+  // console.log(moneyEl);
+
+  // let coreParagraph = moneyEl.nextSibling;
+
+  // while (coreParagraph.tagName.toLowerCase() === "p") {
+  //   console.log(coreParagraph);
+
+  //   addClass(coreParagraph, section);
+
+  //   coreParagraph = coreParagraph.nextSibling;
+  // }
+
   render(<App projectName={PROJECT_NAME} />, root);
 }
 
@@ -88,4 +103,24 @@ if (process.env.NODE_ENV === "development") {
 // Helper functions
 function insertBefore(el, referenceNode) {
   referenceNode.parentNode.insertBefore(el, referenceNode);
+}
+
+function hasClass(el, className) {
+  return el.classList
+    ? el.classList.contains(className)
+    : new RegExp("\\b" + className + "\\b").test(el.className);
+}
+
+function addClass(el, className) {
+  if (el.classList) el.classList.add(className);
+  else if (!hasClass(el, className)) el.className += " " + className;
+}
+
+function removeClass(el, className) {
+  if (el.classList) el.classList.remove(className);
+  else
+    el.className = el.className.replace(
+      new RegExp("\\b" + className + "\\b", "g"),
+      ""
+    );
 }
