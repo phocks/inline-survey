@@ -4,11 +4,12 @@
   margin: auto;
   max-width: 850px;
   padding-top: 1em;
+  color: #1b1a65;
 
   h2 {
     font-family: ABCSerif, serif;
     font-size: 18px;
-    color: black;
+    color: #1b1a65;
     text-transform: unset;
     line-height: normal;
   }
@@ -87,23 +88,23 @@
     }
 
     // @include for-size(desktop-up) {
-      
+
     // }
   }
 
   // label:last-child {
-    // @include for-size(tablet-portrait-up) {
-    //   margin-right: 0;
-    // }
-    // @include for-size(desktop-up) {
+  // @include for-size(tablet-portrait-up) {
+  //   margin-right: 0;
+  // }
+  // @include for-size(desktop-up) {
 
   // }
 
   input[type="radio"]:checked + label {
     color: white;
-    
-    background-color: #0A749B;
-    border: 1px solid #0A749B;
+
+    background-color: #0a749b;
+    border: 1px solid #0a749b;
 
     @include for-size(tablet-portrait-up) {
       background-color: black;

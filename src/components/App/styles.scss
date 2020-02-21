@@ -16,7 +16,11 @@
     padding-top: 0 !important;
   }
 
-  .hide-after ~ * {
+  .hide-after ~ :not(.interactivefooter) {
     display: none;
+  }
+
+  .interactivefooter {
+    min-height: 300px;
   }
 }

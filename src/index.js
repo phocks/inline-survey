@@ -54,6 +54,10 @@ function preInit() {
     ]
   });
 
+  hashify({
+    hashList: ["interactivefooter"]
+  });
+
   // Apply custom styles to page
   const h1 = document.querySelector(".Main h1");
   h1.style.color = "#1B1A65";
@@ -62,6 +66,17 @@ function preInit() {
   paragraphs.forEach(p => {
     p.style.color = "#1B1A65";
   });
+
+  const h2s = document.querySelectorAll(".Main h2");
+  h2s.forEach(h2 => {
+    h2.style.color = "#1B1A65";
+  });
+
+  const headerUpdated = document.querySelector(".Main .Header-updated");
+  if (headerUpdated) headerUpdated.style.color = "#1B1A65";
+
+  const headerPublished = document.querySelector(".Main .Header-published");
+  if (headerPublished) headerPublished.style.color = "#1B1A65";
 }
 
 function init() {
