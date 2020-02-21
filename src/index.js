@@ -28,9 +28,8 @@ function preInit() {
 
     insertBefore(newEl, ref);
   }
-}
 
-function init() {
+  // Convert hash anchors to divs
   hashify({
     defaultClass: "hide-after",
     hashList: [
@@ -55,6 +54,17 @@ function init() {
     ]
   });
 
+  // Apply custom styles to page
+  const h1 = document.querySelector(".Main h1");
+  h1.style.color = "#1B1A65";
+
+  const paragraphs = document.querySelectorAll(".Main p");
+  paragraphs.forEach(p => {
+    p.style.color = "#1B1A65";
+  });
+}
+
+function init() {
   // Categorise sections etc
   // const section = "money691";
   // const moneyEl = document.querySelector("." + section);
@@ -105,5 +115,3 @@ if (process.env.NODE_ENV === "development") {
 function insertBefore(el, referenceNode) {
   referenceNode.parentNode.insertBefore(el, referenceNode);
 }
-
-
