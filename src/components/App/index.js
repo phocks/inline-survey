@@ -8,6 +8,8 @@ import AnimatedIcons from "../AnimatedIcons";
 
 const UpArrow = () => (
   <div className="test">
+    <div>CHOOSE AN OPTION</div>
+    <br />
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"

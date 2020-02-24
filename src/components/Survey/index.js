@@ -77,6 +77,7 @@ export default props => {
             text="I think I would be happier if I had more money"
             questionId={"Q69_1"}
             onChange={handleChange}
+            theme={"pink"}
           />
           {"Q69_1" in answers && (
             <Result questionId={"Q69_1"} choice={answers.Q69_1} data={data} />
