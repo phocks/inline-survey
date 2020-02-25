@@ -33,7 +33,6 @@ function preInit() {
   hashify({
     defaultClass: "hide-after",
     hashList: [
-      "customise",
       "money691",
       "friends692",
       "work693",
@@ -55,7 +54,7 @@ function preInit() {
   });
 
   hashify({
-    hashList: ["interactivefooter"]
+    hashList: ["customise", "interactivefooter", "money691chart", "job698chart"]
   });
 
   // Apply custom styles to page

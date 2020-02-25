@@ -79,10 +79,18 @@ export default props => {
             onChange={handleChange}
             theme={"pink"}
           />
-          {"Q69_1" in answers && (
-            <Result questionId={"Q69_1"} choice={answers.Q69_1} data={data} />
-          )}
         </div>
+      </Portal>
+
+      <Portal node={document.querySelector(".money691chart")}>
+        {"Q69_1" in answers && (
+          <Result
+            questionId={"Q69_1"}
+            choice={answers.Q69_1}
+            data={data}
+            group={"Responses by age"}
+          />
+        )}
       </Portal>
 
       <Portal node={document.querySelector(".friends692")}>
