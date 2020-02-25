@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.scss";
 
 export default props => {
-  const { pre, text, questionId = "default", onChange, theme } = props;
+  const { pre = "WHAT DO YOU THINK?", text, questionId = "default", onChange, theme } = props;
 
   const handleChange = event => {
     const answer = event.target.value;
