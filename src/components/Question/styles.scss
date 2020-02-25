@@ -135,8 +135,32 @@
 
 .pink {
   label {
-    background-color: #CB4868;
+    background-color: #cb4868;
     color: white;
-    border: solid 1px #CB4868;
+    border: solid 1px #cb4868;
+  }
+
+  input[type="radio"]:checked + label {
+    color: white;
+
+    background-color: #1b1a65;
+    border: 1px solid #1b1a65;
+
+    @include for-size(tablet-portrait-up) {
+      background-color: #1b1a65;
+      border-color: #1b1a65;
+    }
+  }
+
+  .dont-know {
+    color: #1b1a65;
+    background-color: rgba(229, 94, 122, 0.3);
+    border-color: rgba(229, 94, 122, 0.3);
+    margin-block-start: 8px;
+
+    @include for-size(tablet-portrait-up) {
+      margin-top: 0;
+      margin-left: 8px;
+    }
   }
 }

@@ -1,7 +1,7 @@
 .root {
   text-align: left;
   transition: all 1s ease-in-out;
-  color: #1B1A65;
+  color: #1b1a65;
 
   .key {
     font-family: ABCSans, sans-serif;
@@ -34,7 +34,7 @@
       font-family: ABCSans, sans-serif;
       display: inline-block;
       transform: translateX(-50%);
-      color: #0081AE;
+      color: #AB3551;
       font-weight: bold;
     }
   }
@@ -47,30 +47,30 @@
 
   .mid-bar {
     height: 2px;
-    background-color: #d8d8d8;
+    background-color: rgba(114, 91, 90, 0.3);
   }
 
   .dot {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     left: 50%;
     top: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
-    background-color: #0081ae;
+    background-color: #E55E7A;
     border-radius: 50%;
   }
 
   .your-dot {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     left: 50%;
     top: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
-    background-color: black;
+    background-color: #1B1A65;
     border-radius: 50%;
     // transition: left 0.75s;
   }

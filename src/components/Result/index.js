@@ -93,7 +93,7 @@ export default props => {
           style={{
             left: `${scale(choice)}%`,
             opacity: `${choice === 0 ? 0.0 : 1.0}`,
-            color: "black",
+            color: "#1B1A65",
             fontWeight: "900"
           }}
         >
