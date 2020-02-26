@@ -68,12 +68,15 @@ function preInit() {
       "sex697chart",
       "travel699chart",
       "community6910chart",
+      "community6910chart2",
       "bettercare6911chart",
       "socialise6912chart",
       "socialmedia6913chart",
       "sleep6914chart",
       "errands6915chart",
+      "errands6915chart2              ",
       "children6916chart",
+      "children6916chart2",
       "romantic6917chart"
     ]
   });

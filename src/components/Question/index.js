@@ -30,7 +30,7 @@ export default props => {
           value={"strongly-disagree"}
           name={questionId}
         />
-        <label htmlFor={`${questionId}-strongly-disagree`}>
+        <label htmlFor={`${questionId}-strongly-disagree`} >
           Strongly disagree
         </label>
         <input

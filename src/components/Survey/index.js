@@ -44,6 +44,10 @@ export default props => {
     const section = hashLookup[data.questionId];
     let targetEl = document.querySelector("." + section);
     removeClass(targetEl, "hide-after");
+
+    // setTimeout(() => {
+    //   removeClass(targetEl, "opacity-none");
+    // }, 100);
   };
 
   const init = async () => {

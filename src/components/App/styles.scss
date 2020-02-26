@@ -16,9 +16,22 @@
     padding-top: 0 !important;
   }
 
-  .hide-after ~ :not(.interactivefooter) {
-    display: none;
+  .u-dropcap ~ * {
+    transition: opacity 1s;
+    opacity: 1;
   }
+
+  .hide-after ~ :not(.interactivefooter) {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  // .opacity-none ~ :not(.interactivefooter) {
+  //   opacity: 0;
+  // }
 
   .interactivefooter {
     padding-top: 50px;
