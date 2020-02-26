@@ -54,7 +54,27 @@ function preInit() {
   });
 
   hashify({
-    hashList: ["customise", "interactivefooter", "money691chart", "job698chart"]
+    hashList: [
+      "customise",
+      "interactivefooter",
+      "money691chart",
+      "job698chart",
+      "friends692chart",
+      "work693chart",
+      "nature694chart",
+      "family695chart",
+      "commute696chart",
+      "sex697chart",
+      "travel699chart",
+      "community6910chart",
+      "bettercare6911chart",
+      "socialise6912chart",
+      "socialmedia6913chart",
+      "sleep6914chart",
+      "errands6915chart",
+      "children6916chart",
+      "romantic6917chart"
+    ]
   });
 
   // Apply custom styles to page

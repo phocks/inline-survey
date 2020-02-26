@@ -6,7 +6,7 @@ import styles from "./styles.scss";
 // import data from "./data.json";
 
 export default props => {
-  const { questionId, choice, data } = props;
+  const { questionId, choice, data, group } = props;
 
   const [averages, setAverages] = useState([]);
   // const [grow, setGrow] = useState()
@@ -20,14 +20,22 @@ export default props => {
       return row.QID === questionId;
     });
 
-    console.log(filtered);
+    // console.log(filtered);
     // filtered.sort((a, b) => (a.value < b.value ? 1 : -1));
-    setAverages(filtered);
+    // setAverages(filtered);
 
     // setTimeout(() => setGrow(true), 10 )
 
     // TODO: further filter this by only relevant
     // qns in an array eg. ["age_report", "overall_report"]
+
+    // If group is specified further filter the data
+    if (group) {
+      const split = filtered.filter(row => row.Group === group);
+      setAverages(split);
+    } else {
+      setAverages(filtered);
+    }
   }, []);
 
   let previousGroup = null;
