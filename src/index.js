@@ -58,6 +58,7 @@ function preInit() {
       "customise",
       "interactivefooter",
       "money691chart",
+      "money691chart2",
       "job698chart",
       "friends692chart",
       "work693chart",

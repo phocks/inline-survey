@@ -93,6 +93,17 @@ export default props => {
         )}
       </Portal>
 
+      <Portal node={document.querySelector(".money691chart2")}>
+        {"Q69_1" in answers && (
+          <Result
+            questionId={"Q69_1"}
+            choice={answers.Q69_1}
+            data={data}
+            group={"Responses by income"}
+          />
+        )}
+      </Portal>
+
       <Portal node={document.querySelector(".friends692")}>
         <div className={styles.questionContainer}>
           <Question
@@ -100,10 +111,13 @@ export default props => {
             questionId={"Q69_2"}
             onChange={handleChange}
           />
-          {"Q69_2" in answers && (
-            <Result questionId={"Q69_2"} choice={answers.Q69_2} data={data} />
-          )}
         </div>
+      </Portal>
+
+      <Portal node={document.querySelector(".friends692chart")}>
+        {"Q69_2" in answers && (
+          <Result questionId={"Q69_2"} choice={answers.Q69_2} data={data} />
+        )}
       </Portal>
 
       <Portal node={document.querySelector(".work693")}>
@@ -113,10 +127,13 @@ export default props => {
             questionId={"Q69_3"}
             onChange={handleChange}
           />
-          {"Q69_3" in answers && (
-            <Result questionId={"Q69_3"} choice={answers.Q69_3} data={data} />
-          )}
         </div>
+      </Portal>
+
+      <Portal node={document.querySelector(".work693chart")}>
+        {"Q69_3" in answers && (
+          <Result questionId={"Q69_3"} choice={answers.Q69_3} data={data} />
+        )}
       </Portal>
 
       <Portal node={document.querySelector(".nature694")}>
@@ -125,6 +142,9 @@ export default props => {
           questionId={"Q69_4"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".nature694chart")}>
         {"Q69_4" in answers && (
           <Result questionId={"Q69_4"} choice={answers.Q69_4} data={data} />
         )}
@@ -136,6 +156,9 @@ export default props => {
           questionId={"Q69_5"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".family695chart")}>
         {"Q69_5" in answers && (
           <Result questionId={"Q69_5"} choice={answers.Q69_5} data={data} />
         )}
@@ -147,6 +170,9 @@ export default props => {
           questionId={"Q69_6"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".commute696chart")}>
         {"Q69_6" in answers && (
           <Result questionId={"Q69_6"} choice={answers.Q69_6} data={data} />
         )}
@@ -158,6 +184,9 @@ export default props => {
           questionId={"Q69_7"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".sex697chart")}>
         {"Q69_7" in answers && (
           <Result questionId={"Q69_7"} choice={answers.Q69_7} data={data} />
         )}
@@ -169,6 +198,9 @@ export default props => {
           questionId={"Q69_8"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".job698chart")}>
         {"Q69_8" in answers && (
           <Result questionId={"Q69_8"} choice={answers.Q69_8} data={data} />
         )}
@@ -180,6 +212,9 @@ export default props => {
           questionId={"Q69_9"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".travel699chart")}>
         {"Q69_9" in answers && (
           <Result questionId={"Q69_9"} choice={answers.Q69_9} data={data} />
         )}
@@ -191,6 +226,9 @@ export default props => {
           questionId={"Q69_10"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".community6910chart")}>
         {"Q69_10" in answers && (
           <Result questionId={"Q69_10"} choice={answers.Q69_10} data={data} />
         )}
@@ -202,6 +240,9 @@ export default props => {
           questionId={"Q69_11"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".bettercare6911chart")}>
         {"Q69_11" in answers && (
           <Result questionId={"Q69_11"} choice={answers.Q69_11} data={data} />
         )}
@@ -213,6 +254,9 @@ export default props => {
           questionId={"Q69_12"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".socialise6912chart")}>
         {"Q69_12" in answers && (
           <Result questionId={"Q69_12"} choice={answers.Q69_12} data={data} />
         )}
@@ -224,6 +268,9 @@ export default props => {
           questionId={"Q69_13"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".socialmedia6913chart")}>
         {"Q69_13" in answers && (
           <Result questionId={"Q69_13"} choice={answers.Q69_13} data={data} />
         )}
@@ -235,6 +282,9 @@ export default props => {
           questionId={"Q69_14"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".sleep6914chart")}>
         {"Q69_14" in answers && (
           <Result questionId={"Q69_14"} choice={answers.Q69_14} data={data} />
         )}
@@ -246,6 +296,9 @@ export default props => {
           questionId={"Q69_15"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".errands6915chart")}>
         {"Q69_15" in answers && (
           <Result questionId={"Q69_15"} choice={answers.Q69_15} data={data} />
         )}
@@ -262,12 +315,21 @@ export default props => {
         )}
       </Portal>
 
+      <Portal node={document.querySelector(".children6916chart")}>
+        {"Q69_16" in answers && (
+          <Result questionId={"Q69_16"} choice={answers.Q69_16} data={data} />
+        )}
+      </Portal>
+
       <Portal node={document.querySelector(".romantic6917")}>
         <Question
           text="I think I would be happier if had a more fulfilling romantic relationship"
           questionId={"Q69_17"}
           onChange={handleChange}
         />
+      </Portal>
+
+      <Portal node={document.querySelector(".romantic6917chart")}>
         {"Q69_17" in answers && (
           <Result questionId={"Q69_17"} choice={answers.Q69_17} data={data} />
         )}

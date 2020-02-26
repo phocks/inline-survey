@@ -20,7 +20,8 @@ export default props => {
       return row.QID === questionId;
     });
 
-    // console.log(filtered);
+    console.log(filtered);
+
     // filtered.sort((a, b) => (a.value < b.value ? 1 : -1));
     // setAverages(filtered);
 
