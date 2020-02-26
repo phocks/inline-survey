@@ -74,7 +74,7 @@ function preInit() {
       "socialmedia6913chart",
       "sleep6914chart",
       "errands6915chart",
-      "errands6915chart2              ",
+      "errands6915chart2",
       "children6916chart",
       "children6916chart2",
       "romantic6917chart"
@@ -85,6 +85,8 @@ function preInit() {
   const h1 = document.querySelector(".Main h1");
   h1.style.color = "#1B1A65";
 
+
+  // TODO: Try doing this wish CSS instead
   const paragraphs = document.querySelectorAll(".Main p");
   paragraphs.forEach(p => {
     p.style.color = "#1B1A65";
