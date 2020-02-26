@@ -310,9 +310,6 @@ export default props => {
           questionId={"Q69_16"}
           onChange={handleChange}
         />
-        {"Q69_16" in answers && (
-          <Result questionId={"Q69_16"} choice={answers.Q69_16} data={data} />
-        )}
       </Portal>
 
       <Portal node={document.querySelector(".children6916chart")}>
