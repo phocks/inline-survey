@@ -5,6 +5,7 @@
 
 
   h3 {
+    font-size: 18px;
     text-align: center;
     color: #1b1a65;
     margin-bottom: 2em;
@@ -12,7 +13,7 @@
 
   .container {
     margin: auto;
-    max-width: 600px;
+    max-width: 550px;
   }
 
   .opinions {
@@ -31,6 +32,7 @@
     .opinion {
       width: 76px;
       transform: rotate(-90deg);
+      text-align: left;
 
       @include for-size(tablet-portrait-up) {
         text-align: center;
