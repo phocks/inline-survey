@@ -1,6 +1,41 @@
+@import "../../sass/breakpoints.scss";
+
 .root {
+  text-align: center;
+
+
   h3 {
     text-align: center;
-    color: #1B1A65;
+    color: #1b1a65;
+    margin-bottom: 2em;
+  }
+
+  .container {
+    margin: auto;
+    max-width: 600px;
+  }
+
+  .opinions {
+    display: flex;
+    font-size: 11px;
+    font-weight: 900;
+    color: #a53b54;
+    justify-content: space-between;
+    align-items: center;
+    font-family: ABCSans, sans-serif;
+
+    @include for-size(tablet-portrait-up) {
+      align-items: flex-end;
+    }
+
+    .opinion {
+      width: 76px;
+      transform: rotate(-90deg);
+
+      @include for-size(tablet-portrait-up) {
+        text-align: center;
+        transform: none;
+      }
+    }
   }
 }
