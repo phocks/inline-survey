@@ -2,7 +2,7 @@
 
 .root {
   text-align: center;
-
+  min-height: 200px;
 
   h3 {
     font-size: 18px;
@@ -24,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: ABCSans, sans-serif;
+    margin-bottom: 1em;
 
     @include for-size(tablet-portrait-up) {
       align-items: flex-end;
@@ -38,6 +39,29 @@
         text-align: center;
         transform: none;
       }
+    }
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    .dot-container {
+      width: 76px;
+      text-align: center;
+    }
+
+    .dot {
+      margin: auto;
+      // position: absolute;
+      width: 12px;
+      height: 12px;
+      // left: 50%;
+      // top: 50%;
+      // -webkit-transform: translateY(-50%) translateX(-50%);
+      // transform: translateY(-50%) translateX(-50%);
+      background-color: #e55e7a;
+      border-radius: 50%;
     }
   }
 }
