@@ -7,6 +7,7 @@ import isEmpty from "lodash.isempty";
 import styles from "./styles.scss";
 import Question from "../Question";
 import Result from "../Result";
+import Chart from "../Chart";
 
 import { hasClass, addClass, removeClass } from "../../lib/utils";
 
@@ -33,6 +34,7 @@ const hashLookup = {
 export default props => {
   const [answers, setAnswers] = useState({});
   const [data, setData] = useState();
+  const [percentData, setPercentData] = useState();
 
   const handleChange = data => {
     const newData = {
@@ -51,13 +53,20 @@ export default props => {
   };
 
   const init = async () => {
+    // Fetch average data
     const [errFetched, fetched] = await to(
       fetch(`${__webpack_public_path__}/data.json`).then(r => r.json())
     );
-
     if (errFetched) console.error(errFetched);
-
     setData(fetched);
+
+    // Fetch percentage data
+    const [errPercent, percentFetched] = await to(
+      fetch(`${__webpack_public_path__}/percent-data.json`).then(r => r.json())
+    );
+    if (errPercent) console.error(errPercent);
+    console.log(percentFetched);
+    setPercentData(percentFetched);
   };
 
   // Init effect
@@ -88,12 +97,22 @@ export default props => {
 
       <Portal node={document.querySelector(".money691chart")}>
         {"Q69_1" in answers && (
-          <Result
-            questionId={"Q69_1"}
-            choice={answers.Q69_1}
-            data={data}
-            group={"Responses by income"}
-          />
+          <>
+            {/* <Result
+              questionId={"Q69_1"}
+              choice={answers.Q69_1}
+              data={data}
+              group={"Responses by income"}
+            /> */}
+
+            <Chart
+              heading={"Responses by income"}
+              group={"income"}
+              questionId={"Q69_1"}
+              choice={answers.Q69_1}
+              data={percentData}
+            />
+          </>
         )}
       </Portal>
 

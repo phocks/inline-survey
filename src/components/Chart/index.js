@@ -4,7 +4,7 @@ import styles from './styles.scss';
 export default props => {
   return (
     <div className={styles.root}>
-      Find me in <strong>src/components/Chart/index.js</strong>
+      <h3>{props.heading}</h3>
     </div>
   );
 }

@@ -82,20 +82,20 @@ function preInit() {
   });
 
   // Apply custom styles to page
-  const h1 = document.querySelector(".Main h1");
-  h1.style.color = "#1B1A65";
+  // const h1 = document.querySelector(".Main h1");
+  // h1.style.color = "#1B1A65";
 
 
   // TODO: Try doing this wish CSS instead
-  const paragraphs = document.querySelectorAll(".Main p");
-  paragraphs.forEach(p => {
-    p.style.color = "#1B1A65";
-  });
+  // const paragraphs = document.querySelectorAll(".Main p");
+  // paragraphs.forEach(p => {
+  //   p.style.color = "#1B1A65";
+  // });
 
-  const h2s = document.querySelectorAll(".Main h2");
-  h2s.forEach(h2 => {
-    h2.style.color = "#1B1A65";
-  });
+  // const h2s = document.querySelectorAll(".Main h2");
+  // h2s.forEach(h2 => {
+  //   h2.style.color = "#1B1A65";
+  // });
 
   const headerUpdated = document.querySelector(".Main .Header-updated");
   if (headerUpdated) headerUpdated.style.color = "#1B1A65";
