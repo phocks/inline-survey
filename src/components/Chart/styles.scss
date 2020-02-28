@@ -1,6 +1,7 @@
 @import "../../sass/breakpoints.scss";
 
 .root {
+  font-family: ABCSans, sans-serif;
   text-align: center;
   min-height: 200px;
 
@@ -23,8 +24,7 @@
     color: #a53b54;
     justify-content: space-between;
     align-items: center;
-    font-family: ABCSans, sans-serif;
-    margin-bottom: 3.5em;
+    margin-bottom: 4em;
 
     @include for-size(tablet-portrait-up) {
       align-items: flex-end;
@@ -47,18 +47,27 @@
     // display: flex;
     // justify-content: space-between;
     position: relative;
+    display: block;
+    min-height: 80px;
 
     .layer {
+      display: flex;
+      justify-content: space-between;
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: aqua;
+
+      .by-group {
+        color: #1b1a65;
+        font-size: 14px;
+        font-weight: bold;
+      }
     }
 
     .dot-container {
       width: 76px;
       text-align: center;
-      min-height: 60px;
+
       display: flex;
       align-items: center;
 
@@ -70,6 +79,7 @@
         border-radius: 50%;
       }
     }
+
     .line {
       position: absolute;
       height: 4px;

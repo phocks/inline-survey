@@ -53,7 +53,7 @@ export default props => {
           return (
             <div className={styles.row} key={iteration}>
               <div className={styles.line}></div>
-              <div className={styles.layer}></div>
+
               <div className={styles.layer}>
                 <div className={styles.dotContainer}>
                   <div
@@ -85,6 +85,10 @@ export default props => {
                     style={getDimensions(chartData[row][4])}
                   ></div>
                 </div>
+              </div>
+
+              <div className={styles.layer}>
+                <div className={styles.byGroup}>{row}</div>
               </div>
             </div>
           );
