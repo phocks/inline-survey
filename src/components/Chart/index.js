@@ -53,35 +53,38 @@ export default props => {
           return (
             <div className={styles.row} key={iteration}>
               <div className={styles.line}></div>
-              <div className={styles.dotContainer}>
-                <div
-                  className={styles.dot}
-                  style={getDimensions(chartData[row][0])}
-                ></div>
-              </div>
-              <div className={styles.dotContainer}>
-                <div
-                  className={styles.dot}
-                  style={getDimensions(chartData[row][1])}
-                ></div>
-              </div>
-              <div className={styles.dotContainer}>
-                <div
-                  className={styles.dot}
-                  style={getDimensions(chartData[row][2])}
-                ></div>
-              </div>
-              <div className={styles.dotContainer}>
-                <div
-                  className={styles.dot}
-                  style={getDimensions(chartData[row][3])}
-                ></div>
-              </div>
-              <div className={styles.dotContainer}>
-                <div
-                  className={styles.dot}
-                  style={getDimensions(chartData[row][4])}
-                ></div>
+              <div className={styles.layer}></div>
+              <div className={styles.layer}>
+                <div className={styles.dotContainer}>
+                  <div
+                    className={styles.dot}
+                    style={getDimensions(chartData[row][0])}
+                  ></div>
+                </div>
+                <div className={styles.dotContainer}>
+                  <div
+                    className={styles.dot}
+                    style={getDimensions(chartData[row][1])}
+                  ></div>
+                </div>
+                <div className={styles.dotContainer}>
+                  <div
+                    className={styles.dot}
+                    style={getDimensions(chartData[row][2])}
+                  ></div>
+                </div>
+                <div className={styles.dotContainer}>
+                  <div
+                    className={styles.dot}
+                    style={getDimensions(chartData[row][3])}
+                  ></div>
+                </div>
+                <div className={styles.dotContainer}>
+                  <div
+                    className={styles.dot}
+                    style={getDimensions(chartData[row][4])}
+                  ></div>
+                </div>
               </div>
             </div>
           );
