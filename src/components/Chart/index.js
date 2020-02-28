@@ -7,6 +7,8 @@ const scale = scaleLinear()
   .domain([0.0, 1.0])
   .range([2, 70]);
 
+const VALUE_OFFSET = 10;
+
 export default props => {
   const filteredData = props.data.filter(entry => {
     return entry.question === props.questionId && entry.group === props.group;
@@ -51,46 +53,103 @@ export default props => {
         {Object.keys(chartData).map((row, iteration) => {
           console.log(chartData[row]);
           return (
-            <div className={styles.row} key={iteration}>
-              <div className={styles.line}></div>
+            <>
+              <div className={styles.byGroup}>{row}</div>
+              <div className={styles.row} key={iteration}>
+                <div className={styles.line}></div>
 
-              <div className={styles.layer}>
-                <div className={styles.dotContainer}>
-                  <div
-                    className={styles.dot}
-                    style={getDimensions(chartData[row][0])}
-                  ></div>
+                <div className={styles.layer}>
+                  <div className={styles.dotContainer}>
+                    <div
+                      className={styles.dot}
+                      style={getDimensions(chartData[row][0])}
+                    ></div>
+                  </div>
+                  <div className={styles.dotContainer}>
+                    <div
+                      className={styles.dot}
+                      style={getDimensions(chartData[row][1])}
+                    ></div>
+                  </div>
+                  <div className={styles.dotContainer}>
+                    <div
+                      className={styles.dot}
+                      style={getDimensions(chartData[row][2])}
+                    ></div>
+                  </div>
+                  <div className={styles.dotContainer}>
+                    <div
+                      className={styles.dot}
+                      style={getDimensions(chartData[row][3])}
+                    ></div>
+                  </div>
+                  <div className={styles.dotContainer}>
+                    <div
+                      className={styles.dot}
+                      style={getDimensions(chartData[row][4])}
+                    ></div>
+                  </div>
                 </div>
-                <div className={styles.dotContainer}>
-                  <div
-                    className={styles.dot}
-                    style={getDimensions(chartData[row][1])}
-                  ></div>
-                </div>
-                <div className={styles.dotContainer}>
-                  <div
-                    className={styles.dot}
-                    style={getDimensions(chartData[row][2])}
-                  ></div>
-                </div>
-                <div className={styles.dotContainer}>
-                  <div
-                    className={styles.dot}
-                    style={getDimensions(chartData[row][3])}
-                  ></div>
-                </div>
-                <div className={styles.dotContainer}>
-                  <div
-                    className={styles.dot}
-                    style={getDimensions(chartData[row][4])}
-                  ></div>
+
+                <div className={styles.layer}>
+                  <div className={styles.dotContainer}>
+                    <div
+                      className={styles.value}
+                      style={{
+                        transform: `translateY(-${VALUE_OFFSET +
+                          scale(chartData[row][0]) * 0.5}px)`
+                      }}
+                    >
+                      {(chartData[row][0] * 100).toFixed(0) + "%"}
+                    </div>
+                  </div>
+                  <div className={styles.dotContainer}>
+                    <div
+                      className={styles.value}
+                      style={{
+                        transform: `translateY(-${VALUE_OFFSET +
+                          scale(chartData[row][1]) * 0.5}px)`
+                      }}
+                    >
+                      {(chartData[row][1] * 100).toFixed(0) + "%"}
+                    </div>
+                  </div>
+                  <div className={styles.dotContainer}>
+                    <div
+                      className={styles.value}
+                      style={{
+                        transform: `translateY(-${VALUE_OFFSET +
+                          scale(chartData[row][2]) * 0.5}px)`
+                      }}
+                    >
+                      {(chartData[row][2] * 100).toFixed(0) + "%"}
+                    </div>
+                  </div>
+                  <div className={styles.dotContainer}>
+                    <div
+                      className={styles.value}
+                      style={{
+                        transform: `translateY(-${VALUE_OFFSET +
+                          scale(chartData[row][3]) * 0.5}px)`
+                      }}
+                    >
+                      {(chartData[row][3] * 100).toFixed(0) + "%"}
+                    </div>
+                  </div>
+                  <div className={styles.dotContainer}>
+                    <div
+                      className={styles.value}
+                      style={{
+                        transform: `translateY(-${VALUE_OFFSET +
+                          scale(chartData[row][4]) * 0.5}px)`
+                      }}
+                    >
+                      {(chartData[row][4] * 100).toFixed(0) + "%"}
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div className={styles.layer}>
-                <div className={styles.byGroup}>{row}</div>
-              </div>
-            </div>
+            </>
           );
         })}
       </div>
