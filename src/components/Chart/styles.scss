@@ -45,18 +45,32 @@
   .row {
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     .dot-container {
       width: 76px;
       text-align: center;
-    }
+      min-height: 40px;
+      display: flex;
+      align-items: center;
 
-    .dot {
-      margin: auto;
-      width: 12px;
-      height: 12px;
-      background-color: #e55e7a;
-      border-radius: 50%;
+      .dot {
+        margin: auto;
+        width: 12px;
+        height: 12px;
+        background-color: #e55e7a;
+        border-radius: 50%;
+      }
+    }
+    .line {
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.3);
+      z-index: -1;
     }
   }
 }

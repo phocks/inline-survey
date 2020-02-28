@@ -20,8 +20,12 @@ export default props => {
           <div className={styles.opinion}>STRONGLY AGREE</div>
         </div>
         <div className={styles.row}>
+        <div className={styles.line}></div>
           <div className={styles.dotContainer}>
-            <div className={styles.dot}></div>
+            <div
+              className={styles.dot}
+              style={{ width: "30px", height: "30px" }}
+            ></div>
           </div>
           <div className={styles.dotContainer}>
             <div className={styles.dot}></div>
@@ -35,6 +39,7 @@ export default props => {
           <div className={styles.dotContainer}>
             <div className={styles.dot}></div>
           </div>
+          
         </div>
       </div>
     </div>
