@@ -24,10 +24,11 @@
     justify-content: space-between;
     align-items: center;
     font-family: ABCSans, sans-serif;
-    margin-bottom: 1em;
+    margin-bottom: 4em;
 
     @include for-size(tablet-portrait-up) {
       align-items: flex-end;
+      margin-bottom: 1.5em;
     }
 
     .opinion {
