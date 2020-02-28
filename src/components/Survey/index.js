@@ -118,12 +118,20 @@ export default props => {
 
       <Portal node={document.querySelector(".money691chart2")}>
         {"Q69_1" in answers && (
-          <Result
-            questionId={"Q69_1"}
-            choice={answers.Q69_1}
-            data={data}
-            group={"Responses by age"}
-          />
+          // <Result
+          //   questionId={"Q69_1"}
+          //   choice={answers.Q69_1}
+          //   data={data}
+          //   group={"Responses by age"}
+          // />
+
+          <Chart
+              heading={"Responses by age"}
+              group={"age2"}
+              questionId={"Q69_1"}
+              choice={answers.Q69_1}
+              data={percentData}
+            />
         )}
       </Portal>
 

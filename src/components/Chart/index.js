@@ -5,7 +5,7 @@ import styles from "./styles.scss";
 
 const scale = scaleLinear()
   .domain([0.0, 1.0])
-  .range([1, 50]);
+  .range([2, 70]);
 
 export default props => {
   const filteredData = props.data.filter(entry => {
@@ -24,6 +24,18 @@ export default props => {
 
   console.log(chartData);
 
+  const getDimensions = data => {
+    let size = Math.round(scale(data));
+
+    // Bump size to keep vertically centered
+    if (size % 2 !== 0) size++;
+
+    return {
+      width: size + "px",
+      height: size + "px"
+    };
+  };
+
   return (
     <div className={styles.root}>
       <div className={styles.container}>
@@ -39,51 +51,36 @@ export default props => {
         {Object.keys(chartData).map((row, iteration) => {
           console.log(chartData[row]);
           return (
-            <div className={styles.row}>
+            <div className={styles.row} key={iteration}>
               <div className={styles.line}></div>
               <div className={styles.dotContainer}>
                 <div
                   className={styles.dot}
-                  style={{
-                    width: Math.round(scale(chartData[row][0])) + "px",
-                    height: Math.round(scale(chartData[row][0])) + "px"
-                  }}
+                  style={getDimensions(chartData[row][0])}
                 ></div>
               </div>
               <div className={styles.dotContainer}>
                 <div
                   className={styles.dot}
-                  style={{
-                    width: Math.round(scale(chartData[row][1])) + "px",
-                    height: Math.round(scale(chartData[row][1])) + "px"
-                  }}
+                  style={getDimensions(chartData[row][1])}
                 ></div>
               </div>
               <div className={styles.dotContainer}>
                 <div
                   className={styles.dot}
-                  style={{
-                    width: Math.round(scale(chartData[row][2])) + "px",
-                    height: Math.round(scale(chartData[row][2])) + "px"
-                  }}
+                  style={getDimensions(chartData[row][2])}
                 ></div>
               </div>
               <div className={styles.dotContainer}>
                 <div
                   className={styles.dot}
-                  style={{
-                    width: Math.round(scale(chartData[row][3])) + "px",
-                    height: Math.round(scale(chartData[row][3])) + "px"
-                  }}
+                  style={getDimensions(chartData[row][3])}
                 ></div>
               </div>
               <div className={styles.dotContainer}>
                 <div
                   className={styles.dot}
-                  style={{
-                    width: Math.round(scale(chartData[row][4])) + "px",
-                    height: Math.round(scale(chartData[row][4])) + "px"
-                  }}
+                  style={getDimensions(chartData[row][4])}
                 ></div>
               </div>
             </div>
