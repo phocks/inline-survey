@@ -313,7 +313,81 @@ export default props => {
         )}
       </Portal>
 
-      {/* Not in order after here */}
+      <Portal node={document.querySelector(".job698")}>
+        <Question
+          text="I think I would be happier if had a better job"
+          questionId={"Q69_8"}
+          onChange={handleChange}
+        />
+      </Portal>
+
+      <Portal node={document.querySelector(".job698chart")}>
+        {"Q69_8" in answers && (
+          // <Result questionId={"Q69_8"} choice={answers.Q69_8} data={data} />
+          <Chart
+            heading={"Responses by age"}
+            group={"age2"}
+            questionId={"Q69_8"}
+            choice={answers.Q69_8}
+            data={percentData}
+          />
+        )}
+      </Portal>
+
+      <Portal node={document.querySelector(".community6910")}>
+        <Question
+          text="I think I would be happier if were more involved in my community"
+          questionId={"Q69_10"}
+          onChange={handleChange}
+        />
+      </Portal>
+
+      <Portal node={document.querySelector(".community6910chart")}>
+        {"Q69_10" in answers && (
+          // <Result questionId={"Q69_10"} choice={answers.Q69_10} data={data} />
+          <Chart
+            heading={"Responses by region"}
+            group={"region"}
+            questionId={"Q69_10"}
+            choice={answers.Q69_10}
+            data={percentData}
+          />
+        )}
+      </Portal>
+
+      <Portal node={document.querySelector(".community6910chart2")}>
+        {"Q69_10" in answers && (
+          // <Result questionId={"Q69_10"} choice={answers.Q69_10} data={data} />
+          <Chart
+            heading={"Responses by vote at 2019 election"}
+            group={"vote"}
+            questionId={"Q69_10"}
+            choice={answers.Q69_10}
+            data={percentData}
+          />
+        )}
+      </Portal>
+
+      <Portal node={document.querySelector(".bettercare6911")}>
+        <Question
+          text="I think I would be happier if took better care of myself"
+          questionId={"Q69_11"}
+          onChange={handleChange}
+        />
+      </Portal>
+
+      <Portal node={document.querySelector(".bettercare6911chart")}>
+        {"Q69_11" in answers && (
+          // <Result questionId={"Q69_11"} choice={answers.Q69_11} data={data} />
+          <Chart
+            heading={"Responses by age"}
+            group={"age2"}
+            questionId={"Q69_11"}
+            choice={answers.Q69_11}
+            data={percentData}
+          />
+        )}
+      </Portal>
 
       <Portal node={document.querySelector(".nature694")}>
         <Question
@@ -350,48 +424,6 @@ export default props => {
         )}
       </Portal> */}
 
-      <Portal node={document.querySelector(".job698")}>
-        <Question
-          text="I think I would be happier if had a better job"
-          questionId={"Q69_8"}
-          onChange={handleChange}
-        />
-      </Portal>
-
-      <Portal node={document.querySelector(".job698chart")}>
-        {"Q69_8" in answers && (
-          <Result questionId={"Q69_8"} choice={answers.Q69_8} data={data} />
-        )}
-      </Portal>
-
-      <Portal node={document.querySelector(".community6910")}>
-        <Question
-          text="I think I would be happier if were more involved in my community"
-          questionId={"Q69_10"}
-          onChange={handleChange}
-        />
-      </Portal>
-
-      <Portal node={document.querySelector(".community6910chart")}>
-        {"Q69_10" in answers && (
-          <Result questionId={"Q69_10"} choice={answers.Q69_10} data={data} />
-        )}
-      </Portal>
-
-      <Portal node={document.querySelector(".bettercare6911")}>
-        <Question
-          text="I think I would be happier if took better care of myself"
-          questionId={"Q69_11"}
-          onChange={handleChange}
-        />
-      </Portal>
-
-      <Portal node={document.querySelector(".bettercare6911chart")}>
-        {"Q69_11" in answers && (
-          <Result questionId={"Q69_11"} choice={answers.Q69_11} data={data} />
-        )}
-      </Portal>
-
       {/* <Portal node={document.querySelector(".socialise6912")}>
         <Question
           text="I think I would be happier if socialised more"
@@ -405,8 +437,6 @@ export default props => {
           <Result questionId={"Q69_12"} choice={answers.Q69_12} data={data} />
         )}
       </Portal> */}
-
-      
 
       {/* <Portal node={document.querySelector(".friends692")}>
         <div className={styles.questionContainer}>
