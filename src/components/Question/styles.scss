@@ -155,7 +155,7 @@
   .dont-know {
     color: #1b1a65;
     background-color: rgba(229, 94, 122, 0.3);
-    border-color: rgba(229, 94, 122, 0.3);
+    border-color: rgba(229, 94, 122, 0.0);
     margin-block-start: 8px;
 
     @include for-size(tablet-portrait-up) {
