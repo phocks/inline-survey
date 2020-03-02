@@ -43,7 +43,7 @@ export default props => {
       <div className={styles.container}>
         <h3>{props.heading}</h3>
         <div className={styles.opinions}>
-          <div className={styles.opinion}>STRONGLY AGREE</div>
+          <div className={styles.opinion}>STRONGLY DISAGREE</div>
           <div className={styles.opinion}>SOMEWHAT DISAGREE</div>
           <div className={styles.opinion}>NEUTRAL</div>
           <div className={styles.opinion}>SOMEWHAT AGREE</div>
