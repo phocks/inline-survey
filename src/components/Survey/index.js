@@ -51,18 +51,18 @@ export default props => {
 
   const init = async () => {
     // Fetch average data
-    const [errFetched, fetched] = await to(
-      fetch(`${__webpack_public_path__}/data.json`).then(r => r.json())
-    );
-    if (errFetched) console.error(errFetched);
-    setData(fetched);
+    // const [errFetched, fetched] = await to(
+    //   fetch(`${__webpack_public_path__}/data.json`).then(r => r.json())
+    // );
+    // if (errFetched) console.error(errFetched);
+    // setData(fetched);
 
     // Fetch percentage data
     const [errPercent, percentFetched] = await to(
       fetch(`${__webpack_public_path__}/percent-data.json`).then(r => r.json())
     );
     if (errPercent) console.error(errPercent);
-    console.log(percentFetched);
+
     setPercentData(percentFetched);
   };
 
@@ -74,8 +74,6 @@ export default props => {
   useEffect(() => {
     // Don't fire on mount
     if (isEmpty(answers)) return;
-
-    console.log(answers);
   }, [answers]);
 
   return (

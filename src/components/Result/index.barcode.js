@@ -3,7 +3,6 @@
  * we were trying as a test.
  */
 
-
 import React, { useState, useEffect } from "react";
 import { scaleLinear } from "d3-scale";
 
@@ -26,8 +25,6 @@ export default props => {
     }
   } = props;
 
-  console.log(choice);
-
   const [averages, setAverages] = useState();
 
   const scale = scaleLinear()
@@ -39,7 +36,6 @@ export default props => {
       return row.QID === questionId;
     });
 
-    console.log(filtered);
     setAverages(filtered);
   }, []);
 

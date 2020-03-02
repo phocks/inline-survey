@@ -49,11 +49,10 @@ export default props => {
         </div>
 
         {Object.keys(chartData).map((row, iteration) => {
-          console.log(chartData[row]);
           return (
-            <>
+            <div key={iteration}>
               <div className={styles.byGroup}>{row}</div>
-              <div className={styles.row} key={iteration}>
+              <div className={styles.row} >
                 <div className={styles.line}></div>
 
                 <div className={styles.layer}>
@@ -147,7 +146,7 @@ export default props => {
                   </div>
                 </div>
               </div>
-            </>
+            </div>
           );
         })}
       </div>
