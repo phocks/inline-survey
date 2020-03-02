@@ -3,18 +3,18 @@ import { scaleLinear } from "d3-scale";
 
 import styles from "./styles.scss";
 
+// Make a function to control size of dot
 const scale = scaleLinear()
   .domain([0.0, 1.0])
   .range([2, 70]);
 
+// Percentage values sit on top of dots
 const VALUE_OFFSET = 10;
 
 export default props => {
   const filteredData = props.data.filter(entry => {
     return entry.question === props.questionId && entry.group === props.group;
   });
-
-  console.log(filteredData);
 
   let chartData = {};
 
@@ -23,8 +23,6 @@ export default props => {
       chartData[item.by_group] = [];
     chartData[item.by_group].push(item.value);
   }
-
-  console.log(chartData);
 
   const getDimensions = data => {
     let size = Math.round(scale(data));

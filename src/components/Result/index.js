@@ -3,13 +3,10 @@ import { scaleLinear } from "d3-scale";
 
 import styles from "./styles.scss";
 
-// import data from "./data.json";
-
 export default props => {
   const { questionId, choice, data, group } = props;
 
   const [averages, setAverages] = useState([]);
-  // const [grow, setGrow] = useState()
 
   const scale = scaleLinear()
     .domain([1, 5])
@@ -19,16 +16,6 @@ export default props => {
     const filtered = data.filter(row => {
       return row.QID === questionId;
     });
-
-    // console.log(filtered);
-
-    // filtered.sort((a, b) => (a.value < b.value ? 1 : -1));
-    // setAverages(filtered);
-
-    // setTimeout(() => setGrow(true), 10 )
-
-    // TODO: further filter this by only relevant
-    // qns in an array eg. ["age_report", "overall_report"]
 
     // If group is specified further filter the data
     if (group) {
@@ -43,7 +30,6 @@ export default props => {
 
   return (
     <div className={styles.root}>
-      {/* <div className={styles.root} style={{maxHeight: grow ? `${averages.length * 50}px` : "0px"}}> */}
       <div className={styles.key}>
         <span className={styles.left}>AGREE LESS</span>
         <span className={styles.mid}>NEUTRAL</span>

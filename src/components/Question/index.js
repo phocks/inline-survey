@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import styles from "./styles.scss";
 
 export default props => {
-  const { pre = "WHAT DO YOU THINK?", text, questionId = "default", onChange, theme } = props;
+  const {
+    pre = "WHAT DO YOU THINK?",
+    text,
+    questionId = "default",
+    onChange,
+    theme = "pink"
+  } = props;
 
   const handleChange = event => {
     const answer = event.target.value;
@@ -20,7 +26,7 @@ export default props => {
   };
 
   return (
-    <div className={`${styles.root} ${styles.pink}`} onChange={handleChange}>
+    <div className={`${styles.root} ${styles[theme]}`} onChange={handleChange}>
       {pre && <div className={styles.pre}>{pre}</div>}
       {text && <h2 className={styles.title}>{text}</h2>}
       <div className={styles.choices}>
@@ -30,7 +36,7 @@ export default props => {
           value={"strongly-disagree"}
           name={questionId}
         />
-        <label htmlFor={`${questionId}-strongly-disagree`} >
+        <label htmlFor={`${questionId}-strongly-disagree`}>
           Strongly disagree
         </label>
         <input
