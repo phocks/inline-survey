@@ -93,7 +93,7 @@ export default props => {
       <Portal node={document.querySelector(".money691chart")}>
         {"Q69_1" in answers && (
           <Chart
-            heading={"Responses by income"}
+            heading={"Even the rich think more money would make them happier."}
             group={"income"}
             questionId={"Q69_1"}
             choice={answers.Q69_1}
@@ -105,7 +105,7 @@ export default props => {
       <Portal node={document.querySelector(".money691chart2")}>
         {"Q69_1" in answers && (
           <Chart
-            heading={"Responses by age"}
+            heading={"As people get older, they desire money less"}
             group={"age2"}
             questionId={"Q69_1"}
             choice={answers.Q69_1}
@@ -382,7 +382,7 @@ export default props => {
         {"Q69_4" in answers && (
           <Chart
             heading={"Responses by age"}
-            group={"age2"}
+            group={"state"}
             questionId={"Q69_4"}
             choice={answers.Q69_4}
             data={percentData}
