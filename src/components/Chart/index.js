@@ -12,7 +12,7 @@ const scale = scaleLinear()
 const VALUE_OFFSET = 10;
 
 export default props => {
-  const { theme = "blue" } = props;
+  const { theme = "pink" } = props;
 
   const filteredData = props.data.filter(entry => {
     return entry.question === props.questionId && entry.group === props.group;
