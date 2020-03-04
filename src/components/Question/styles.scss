@@ -86,19 +86,7 @@
       flex: 1;
       min-height: 60px;
     }
-
-    // @include for-size(desktop-up) {
-
-    // }
   }
-
-  // label:last-child {
-  // @include for-size(tablet-portrait-up) {
-  //   margin-right: 0;
-  // }
-  // @include for-size(desktop-up) {
-
-  // }
 
   input[type="radio"]:checked + label {
     color: white;
@@ -155,7 +143,39 @@
   .dont-know {
     color: #1b1a65;
     background-color: rgba(229, 94, 122, 0.3);
-    border-color: rgba(229, 94, 122, 0.0);
+    border-color: rgba(229, 94, 122, 0);
+    margin-block-start: 8px;
+
+    @include for-size(tablet-portrait-up) {
+      margin-top: 0;
+      margin-left: 8px;
+    }
+  }
+}
+
+.blue {
+  label {
+    background-color: #237BC0;
+    color: white;
+    border: solid 1px #237BC0;
+  }
+
+  input[type="radio"]:checked + label {
+    color: white;
+
+    background-color: #1b1a65;
+    border: 1px solid #1b1a65;
+
+    @include for-size(tablet-portrait-up) {
+      background-color: #1b1a65;
+      border-color: #1b1a65;
+    }
+  }
+
+  .dont-know {
+    color: #1b1a65;
+    background-color: rgba(35, 123, 192, 0.3);
+    border-color: rgba(35, 123, 192, 0);
     margin-block-start: 8px;
 
     @include for-size(tablet-portrait-up) {
@@ -187,7 +207,7 @@
   .dont-know {
     color: #1b1a65;
     background-color: rgba(229, 94, 122, 0.3);
-    border-color: rgba(229, 94, 122, 0.0);
+    border-color: rgba(229, 94, 122, 0);
     margin-block-start: 8px;
 
     @include for-size(tablet-portrait-up) {

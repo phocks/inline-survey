@@ -12,6 +12,8 @@ const scale = scaleLinear()
 const VALUE_OFFSET = 10;
 
 export default props => {
+  const { theme = "blue" } = props;
+
   const filteredData = props.data.filter(entry => {
     return entry.question === props.questionId && entry.group === props.group;
   });
@@ -37,7 +39,7 @@ export default props => {
   };
 
   return (
-    <div className={styles.root}>
+    <div className={`${styles.root} ${styles[theme]}`}>
       <div className={styles.container}>
         <h3>{props.heading}</h3>
         <div className={styles.opinions}>
@@ -52,7 +54,7 @@ export default props => {
           return (
             <div key={iteration}>
               <div className={styles.byGroup}>{row}</div>
-              <div className={styles.row} >
+              <div className={styles.row}>
                 <div className={styles.line}></div>
 
                 <div className={styles.layer}>

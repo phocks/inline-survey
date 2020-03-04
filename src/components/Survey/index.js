@@ -85,7 +85,7 @@ export default props => {
             text="I think I would be happier if I had more money"
             questionId={"Q69_1"}
             onChange={handleChange}
-            theme={"pink"}
+            theme={"blue"}
           />
         </div>
       </Portal>
@@ -119,6 +119,7 @@ export default props => {
           text="I think I would be happier if travelled more often"
           questionId={"Q69_9"}
           onChange={handleChange}
+          theme={"green"}
         />
       </Portal>
 
