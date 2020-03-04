@@ -85,7 +85,7 @@ export default props => {
             text="I think I would be happier if I had more money"
             questionId={"Q69_1"}
             onChange={handleChange}
-            theme={"green"}
+            theme={"pink"}
           />
         </div>
       </Portal>
@@ -98,7 +98,7 @@ export default props => {
             questionId={"Q69_1"}
             choice={answers.Q69_1}
             data={percentData}
-            theme={"green"}
+            theme={"pink"}
           />
         )}
       </Portal>
@@ -111,6 +111,7 @@ export default props => {
             questionId={"Q69_1"}
             choice={answers.Q69_1}
             data={percentData}
+            theme={"pink"}
           />
         )}
       </Portal>
@@ -120,7 +121,7 @@ export default props => {
           text="I think I would be happier if travelled more often"
           questionId={"Q69_9"}
           onChange={handleChange}
-          theme={"green"}
+          theme={"blue"}
         />
       </Portal>
 
@@ -132,6 +133,7 @@ export default props => {
             questionId={"Q69_9"}
             choice={answers.Q69_9}
             data={percentData}
+            theme={"blue"}
           />
         )}
       </Portal>
@@ -141,6 +143,7 @@ export default props => {
           text="I think I would be happier if slept more"
           questionId={"Q69_14"}
           onChange={handleChange}
+          theme={"orange"}
         />
       </Portal>
 
@@ -152,6 +155,7 @@ export default props => {
             questionId={"Q69_14"}
             choice={answers.Q69_14}
             data={percentData}
+            theme={"orange"}
           />
         )}
       </Portal>
@@ -161,6 +165,7 @@ export default props => {
           text="I think I would be happier if had a better sex life"
           questionId={"Q69_7"}
           onChange={handleChange}
+          theme={"green"}
         />
       </Portal>
 
@@ -172,6 +177,7 @@ export default props => {
             questionId={"Q69_7"}
             choice={answers.Q69_7}
             data={percentData}
+            theme={"green"}
           />
         )}
       </Portal>
@@ -181,6 +187,7 @@ export default props => {
           text="I think I would be happier if spent less time running errands and doing chores"
           questionId={"Q69_15"}
           onChange={handleChange}
+          theme={"pink"}
         />
       </Portal>
 
@@ -192,6 +199,7 @@ export default props => {
             questionId={"Q69_15"}
             choice={answers.Q69_15}
             data={percentData}
+            theme={"pink"}
           />
         )}
       </Portal>
@@ -204,6 +212,7 @@ export default props => {
             questionId={"Q69_15"}
             choice={answers.Q69_15}
             data={percentData}
+            theme={"pink"}
           />
         )}
       </Portal>
@@ -213,6 +222,7 @@ export default props => {
           text="I think I would be happier if spent less time on social media"
           questionId={"Q69_13"}
           onChange={handleChange}
+          theme={"blue"}
         />
       </Portal>
 
@@ -224,6 +234,7 @@ export default props => {
             questionId={"Q69_13"}
             choice={answers.Q69_13}
             data={percentData}
+            theme={"blue"}
           />
         )}
       </Portal>
@@ -233,6 +244,7 @@ export default props => {
           text="I think I would be happier if spent more time with family"
           questionId={"Q69_5"}
           onChange={handleChange}
+          theme={"orange"}
         />
       </Portal>
 
@@ -244,6 +256,7 @@ export default props => {
             questionId={"Q69_5"}
             choice={answers.Q69_5}
             data={percentData}
+            theme={"orange"}
           />
         )}
       </Portal>
@@ -253,6 +266,7 @@ export default props => {
           text="I think I would be happier if had (more) children"
           questionId={"Q69_16"}
           onChange={handleChange}
+          theme={"green"}
         />
       </Portal>
 
@@ -264,6 +278,7 @@ export default props => {
             questionId={"Q69_16"}
             choice={answers.Q69_16}
             data={percentData}
+            theme={"green"}
           />
         )}
       </Portal>
@@ -276,6 +291,7 @@ export default props => {
             questionId={"Q69_16"}
             choice={answers.Q69_16}
             data={percentData}
+            theme={"green"}
           />
         )}
       </Portal>
@@ -285,6 +301,7 @@ export default props => {
           text="I think I would be happier if had a more fulfilling romantic relationship"
           questionId={"Q69_17"}
           onChange={handleChange}
+          theme={"pink"}
         />
       </Portal>
 
@@ -296,6 +313,7 @@ export default props => {
             questionId={"Q69_17"}
             choice={answers.Q69_17}
             data={percentData}
+            theme={"pink"}
           />
         )}
       </Portal>
@@ -305,6 +323,7 @@ export default props => {
           text="I think I would be happier if had a better job"
           questionId={"Q69_8"}
           onChange={handleChange}
+          theme={"blue"}
         />
       </Portal>
 
@@ -316,6 +335,7 @@ export default props => {
             questionId={"Q69_8"}
             choice={answers.Q69_8}
             data={percentData}
+            theme={"blue"}
           />
         )}
       </Portal>
@@ -325,6 +345,7 @@ export default props => {
           text="I think I would be happier if were more involved in my community"
           questionId={"Q69_10"}
           onChange={handleChange}
+          theme={"orange"}
         />
       </Portal>
 
@@ -336,6 +357,7 @@ export default props => {
             questionId={"Q69_10"}
             choice={answers.Q69_10}
             data={percentData}
+            theme={"orange"}
           />
         )}
       </Portal>
@@ -348,6 +370,7 @@ export default props => {
             questionId={"Q69_10"}
             choice={answers.Q69_10}
             data={percentData}
+            theme={"orange"}
           />
         )}
       </Portal>
@@ -357,6 +380,7 @@ export default props => {
           text="I think I would be happier if took better care of myself"
           questionId={"Q69_11"}
           onChange={handleChange}
+          theme={"green"}
         />
       </Portal>
 
@@ -368,6 +392,7 @@ export default props => {
             questionId={"Q69_11"}
             choice={answers.Q69_11}
             data={percentData}
+            theme={"green"}
           />
         )}
       </Portal>
@@ -377,6 +402,7 @@ export default props => {
           text="I think I would be happier if spent more time in nature"
           questionId={"Q69_4"}
           onChange={handleChange}
+          theme={"pink"}
         />
       </Portal>
 
@@ -388,6 +414,7 @@ export default props => {
             questionId={"Q69_4"}
             choice={answers.Q69_4}
             data={percentData}
+            theme={"pink"}
           />
         )}
       </Portal>
