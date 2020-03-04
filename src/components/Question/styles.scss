@@ -124,7 +124,7 @@
 .pink {
   label {
     background-color: #cb4868;
-    color: white;
+    white: white;
     border: solid 1px #cb4868;
   }
 
@@ -155,9 +155,9 @@
 
 .blue {
   label {
-    background-color: #237BC0;
+    background-color: #237bc0;
     color: white;
-    border: solid 1px #237BC0;
+    border: solid 1px #237bc0;
   }
 
   input[type="radio"]:checked + label {
@@ -185,11 +185,11 @@
   }
 }
 
-.green {
+.orange {
   label {
-    background-color: green;
+    background-color: #d4442e;
     color: white;
-    border: solid 1px #cb4868;
+    border: solid 1px #d4442e;
   }
 
   input[type="radio"]:checked + label {
@@ -206,8 +206,40 @@
 
   .dont-know {
     color: #1b1a65;
-    background-color: rgba(229, 94, 122, 0.3);
-    border-color: rgba(229, 94, 122, 0);
+    background-color: rgba(212, 68, 46, 0.3);
+    border-color: rgba(212, 68, 46, 0);
+    margin-block-start: 8px;
+
+    @include for-size(tablet-portrait-up) {
+      margin-top: 0;
+      margin-left: 8px;
+    }
+  }
+}
+
+.green {
+  label {
+    background-color: #21847E;
+    color: white;
+    border: solid 1px #21847E;
+  }
+
+  input[type="radio"]:checked + label {
+    color: white;
+
+    background-color: #1b1a65;
+    border: 1px solid #1b1a65;
+
+    @include for-size(tablet-portrait-up) {
+      background-color: #1b1a65;
+      border-color: #1b1a65;
+    }
+  }
+
+  .dont-know {
+    color: #1b1a65;
+    background-color: rgba(32, 132, 126, 0.3);
+    border-color: rgba(32, 132, 126, 0);
     margin-block-start: 8px;
 
     @include for-size(tablet-portrait-up) {

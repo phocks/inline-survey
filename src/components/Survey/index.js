@@ -85,7 +85,7 @@ export default props => {
             text="I think I would be happier if I had more money"
             questionId={"Q69_1"}
             onChange={handleChange}
-            theme={"blue"}
+            theme={"green"}
           />
         </div>
       </Portal>
@@ -98,6 +98,7 @@ export default props => {
             questionId={"Q69_1"}
             choice={answers.Q69_1}
             data={percentData}
+            theme={"green"}
           />
         )}
       </Portal>
