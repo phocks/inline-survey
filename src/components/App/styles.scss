@@ -39,8 +39,8 @@
   }
 
   .Main {
-    z-index: -2;
     p {
+      z-index: 0;
       color: rgb(27, 26, 101);
     }
 
@@ -50,6 +50,8 @@
   }
 
   .Header {
-    z-index: -2;
+    background-color: transparent;
   }
+
+
 }

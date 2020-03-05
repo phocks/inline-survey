@@ -10,8 +10,9 @@ const root = document.querySelector(`[data-${PROJECT_NAME}-root]`);
 // Only on page load. Not on hot reload
 function preInit() {
   // Set header background color
-  const headerDesktopEl = document.querySelector(".Header");
-  headerDesktopEl.style.background = "#ffd587";
+  // Now done in CSS
+  // const headerDesktopEl = document.querySelector(".Header");
+  // headerDesktopEl.style.background = "#ffd587";
 
   // Add a div before our header so we can attach animation
   const isAlreadyAttached = document.querySelector(

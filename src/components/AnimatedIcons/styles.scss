@@ -9,15 +9,12 @@
 
   .cloud {
     position: fixed;
-    top: 100px;
-    left: 100px;
     overflow: visible;
-    // height: 200px;
-    width: 400px;
+    // width: 400px;
     z-index: -1;
 
     svg {
-      max-width: 400px;
+      // max-width: 400px;
     }
   }
 }
