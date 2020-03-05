@@ -11,18 +11,34 @@ import { Portal } from "react-portal";
 import styles from "./styles.scss";
 
 import faceAnimation from "./Face.svg";
+import cloudAnimation from "./cloud.svg";
 
 export default props => {
+  const initImages = () => {
+    console.log("init");
+  };
   return (
     <Portal node={document.querySelector(".storylab-header-animation")}>
       <div className={styles.root}>
-        <SVG
-          src={faceAnimation}
-          // uniquifyIDs={true}
-          // uniqueHash="face"
-          // style={{}}
-          // onLoad={globeLoop}
-        />
+        <div className={styles.face}>
+          <SVG
+            src={faceAnimation}
+            uniquifyIDs={true}
+            uniqueHash="face"
+            style={{}}
+            onLoad={initImages}
+          />
+        </div>
+
+        <div className={styles.cloud}>
+          <SVG
+            src={cloudAnimation}
+            uniquifyIDs={true}
+            uniqueHash="cloud"
+            style={{}}
+            onLoad={initImages}
+          />
+        </div>
       </div>
     </Portal>
   );

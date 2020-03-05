@@ -1,13 +1,23 @@
 .root {
   overflow: hidden;
-  // height: 200px;
 
-  svg {
-    max-width: 200px;
-    
+  .face {
+    svg {
+      max-width: 200px;
+    }
   }
-  // border: 1px solid rgb(255, 115, 0);
-  // padding: 20px;
-  // text-align: center;
-  // color: black;
+
+  .cloud {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    overflow: visible;
+    // height: 200px;
+    width: 400px;
+    z-index: -1;
+
+    svg {
+      max-width: 400px;
+    }
+  }
 }
