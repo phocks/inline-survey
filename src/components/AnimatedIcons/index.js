@@ -122,14 +122,14 @@ export default props => {
                 uniquifyIDs={true}
                 uniqueHash={cloud.name}
                 style={{
+                  // TODO: Set not random
                   position: "fixed",
                   width: 500 * Math.random() + 200 + "px",
                   top: window.innerHeight * Math.random() - 250 + "px",
                   left: window.innerWidth * Math.random() - 250 + "px"
-                  // top: "0px",
-                  // left: "0px"
                 }}
                 onLoad={() => {
+                  // Delay animation or else won't work
                   setTimeout(() => {
                     animateCloud(cloud.name);
                   }, Math.random() * 1000);
