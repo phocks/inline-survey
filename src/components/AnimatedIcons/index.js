@@ -15,10 +15,10 @@ import animate from "./animateCloud";
 // Define our clouds. Position is percentage of screen x, y
 // Size is percentage of average screen dimensions
 const clouds = [
-  { name: "cloud1", position: [1, 1], size: 29 },
-  { name: "cloud3", position: [15, 66], size: 39 },
-  { name: "cloud2", position: [70, 60], size: 32 },
-  { name: "cloud4", position: [50, 20], size: 31 }
+  { name: "cloud1", position: [18, 16], size: 39 },
+  { name: "cloud2", position: [72, 33], size: 59 },
+  { name: "cloud3", position: [70, 87], size: 45 },
+  { name: "cloud4", position: [25, 69], size: 41 }
 ];
 
 export default props => {

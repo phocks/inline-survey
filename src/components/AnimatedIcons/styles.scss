@@ -10,11 +10,10 @@
   .cloud {
     position: fixed;
     overflow: visible;
-    // width: 400px;
     z-index: -1;
 
     svg {
-      // max-width: 400px;
+      transform: translate(-50%, -50%);
     }
   }
 }
