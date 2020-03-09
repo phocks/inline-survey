@@ -10,18 +10,19 @@ import { useWindowSize } from "../../lib/utils";
 
 import faceAnimation from "./Face.svg";
 import cloudAnimation from "./cloud.svg";
-import animate from "./animateCloud";
+
+import animate from "./animateCloud"; // Call this to animate
 
 // Define our clouds. Position is percentage of screen x, y
 // Size is percentage of average screen dimensions
 const clouds = [
-  { name: "cloud1", position: [18, 16], size: 39 },
-  { name: "cloud2", position: [72, 33], size: 59 },
-  { name: "cloud3", position: [70, 87], size: 45 },
-  { name: "cloud4", position: [25, 69], size: 41 }
+  { name: "cloud1", position: [24, 16], size: 39 },
+  { name: "cloud2", position: [69, 35], size: 55 },
+  { name: "cloud3", position: [76, 67], size: 45 },
+  { name: "cloud4", position: [31, 87], size: 41 }
 ];
 
-export default props => {
+export default () => {
   const [cloudColor, setCloudColor] = useState("#ffbcaa");
   const size = useWindowSize();
 
@@ -92,12 +93,19 @@ export default props => {
         observer.unobserve(target);
       });
     };
-  }, []);
+  }, []); // Only once on mount
 
   return (
     <Portal node={document.querySelector(".storylab-header-animation")}>
       <div className={styles.root}>
-        <div className={styles.face}>
+        <div
+          className={styles.face}
+          onClick={() => {
+            var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
+            setCloudColor("#" + randomColor);
+          }}
+        >
           <SVG
             src={faceAnimation}
             uniquifyIDs={true}
@@ -108,17 +116,7 @@ export default props => {
 
         {clouds.map((cloud, iteration) => {
           return (
-            <div
-              className={styles.cloud}
-              key={iteration}
-              onClick={() => {
-                var randomColor = Math.floor(Math.random() * 16777215).toString(
-                  16
-                );
-
-                setCloudColor("#" + randomColor);
-              }}
-            >
+            <div className={styles.cloud} key={iteration}>
               <SVG
                 src={cloudAnimation}
                 uniquifyIDs={true}

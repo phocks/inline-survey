@@ -4,7 +4,7 @@ import Survey from "../Survey";
 
 import AnimatedIcons from "../AnimatedIcons";
 
-export default props => {
+export default () => {
   return (
     <div className={styles.root}>
       <AnimatedIcons />

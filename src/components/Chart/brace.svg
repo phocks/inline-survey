@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="12px" viewBox="0 0 81 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="xs-&lt;700" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-254.000000, -2110.000000)" id="Container" stroke="#A73953" stroke-width="2.5">
+            <g transform="translate(-45.000000, 141.000000)">
+                <g id="Body" transform="translate(0.000000, 890.000000)">
+                    <g id="Answer-bubble-matrix" transform="translate(0.000000, 811.000000)">
+                        <g id="Chart" transform="translate(0.000000, 74.000000)">
+                            <g id="Group-2" transform="translate(60.000000, 179.000000)">
+                                <g id="Group-7" transform="translate(238.000000, 0.000000)">
+                                    <path d="M3,27 C3,26.4444444 3,25.6111111 3,24.5 C3,22.0147186 4.93916668,20 7.33125,20 C21.7956149,20 31.2865756,20 35.8041321,20 C38.0087874,20 39.9074101,19 41.5,17 C43.1023836,19 45.0093873,20 47.2210114,20 C51.7358054,20 61.218385,20 75.66875,20 C78.0608333,20 80,22.0147186 80,24.5 C80,25.6111111 80,26.4444444 80,27" id="Path"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

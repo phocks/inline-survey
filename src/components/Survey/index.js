@@ -10,6 +10,7 @@ import Chart from "../Chart";
 import UpArrow from "../UpArrow";
 
 // Helpers for element classes
+// To make gradual reveal work
 import { hasClass, addClass, removeClass } from "../../lib/utils";
 
 const hashLookup = {
@@ -36,8 +37,6 @@ export default props => {
   const [answers, setAnswers] = useState({});
   const [percentData, setPercentData] = useState();
 
-  console.log("Q69_4" in answers);
-
   const handleChange = data => {
     const newData = {
       [data.questionId]: data.value
@@ -52,9 +51,12 @@ export default props => {
 
   const init = async () => {
     // Fetch percentage data
+    // Here we are using a method to avoid try/catch blocks
     const [errPercent, percentFetched] = await to(
       fetch(`${__webpack_public_path__}/percent-data.json`).then(r => r.json())
     );
+
+    // Error detection
     if (errPercent) console.error(errPercent);
 
     setPercentData(percentFetched);
@@ -422,8 +424,8 @@ export default props => {
           />
         )}
       </Portal>
-      {/* <div className={styles.displayNone}></div> */}
 
+      {/* Guide the user back up */}
       {!("Q69_4" in answers) && (
         <Portal node={document.querySelector(".interactivefooter")}>
           <UpArrow />

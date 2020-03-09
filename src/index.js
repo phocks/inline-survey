@@ -1,4 +1,5 @@
 import "regenerator-runtime/runtime"; // async/await support
+import 'intersection-observer'; // Polyfill
 import React from "react";
 import { render } from "react-dom";
 import App from "./components/App";
@@ -9,11 +10,6 @@ const root = document.querySelector(`[data-${PROJECT_NAME}-root]`);
 
 // Only on page load. Not on hot reload
 function preInit() {
-  // Set header background color
-  // Now done in CSS
-  // const headerDesktopEl = document.querySelector(".Header");
-  // headerDesktopEl.style.background = "#ffd587";
-
   // Add a div before our header so we can attach animation
   const isAlreadyAttached = document.querySelector(
     ".storylab-header-animation"
