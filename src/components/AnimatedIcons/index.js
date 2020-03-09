@@ -9,6 +9,7 @@ import React, { useState, useEffect } from "react";
 import SVG from "react-inlinesvg";
 import { Portal } from "react-portal";
 import styles from "./styles.scss";
+import sectionStyles from "../Question/styles.scss";
 
 import { useWindowSize } from "../../lib/utils";
 
@@ -20,8 +21,8 @@ import animate from "./animateCloud";
 // Size is percentage of average screen dimensions
 const clouds = [
   { name: "cloud1", position: [1, 1], size: 29 },
+  { name: "cloud3", position: [15, 66], size: 39 },
   { name: "cloud2", position: [70, 60], size: 32 },
-  { name: "cloud3", position: [20, 60], size: 39 },
   { name: "cloud4", position: [50, 20], size: 31 }
 ];
 
@@ -58,11 +59,25 @@ export default props => {
   useEffect(() => {
     // Set up intersection observer to detect if on screen
     // to change colour of clouds
-    let target = document.querySelector(".travel699");
+    const targets = document.querySelectorAll("." + sectionStyles.root);
 
     let callback = (entries, observer) => {
       entries.forEach(entry => {
-        console.log(entry, "");
+        if (entry.isIntersecting) {
+          let newColor;
+
+          if (entry.target.className.includes("pink")) {
+            newColor = "#ffbcaa";
+          } else if (entry.target.className.includes("blue")) {
+            newColor = "#bad3E6";
+          } else if (entry.target.className.includes("green")) {
+            newColor = "#acd7d5";
+          } else if (entry.target.className.includes("orange")) {
+            newColor = "#ffb3aa";
+          }
+
+          setCloudColor(newColor);
+        }
       });
     };
 
@@ -71,12 +86,16 @@ export default props => {
       threshold: 0.0
     });
 
-    observer.observe(target);
+    targets.forEach(target => {
+      observer.observe(target);
+    });
 
     // Unmount function
     // Unobserve so we don't fire multiple observations
     return () => {
-      observer.unobserve(target);
+      targets.forEach(target => {
+        observer.unobserve(target);
+      });
     };
   }, []);
 
