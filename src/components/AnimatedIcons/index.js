@@ -1,10 +1,5 @@
 import "./keyshape.min";
 
-// Make sure KeyshapeJS is in global
-if (KeyshapeJS.version.indexOf("1.") != 0)
-  throw Error("Expected KeyshapeJS v1.*.*");
-window.ks = document.ks = KeyshapeJS;
-
 import React, { useState, useEffect } from "react";
 import SVG from "react-inlinesvg";
 import { Portal } from "react-portal";
@@ -83,7 +78,7 @@ export default props => {
 
     let observer = new IntersectionObserver(callback, {
       rootMargin: "0px",
-      threshold: 0.0
+      threshold: 1.0
     });
 
     targets.forEach(target => {
