@@ -26,7 +26,7 @@ export default props => {
   };
 
   return (
-    <div className={`${styles.root} ${styles[theme]}`} onChange={handleChange}>
+    <div className={`${styles.root} ${styles[theme]} ${theme}`} onChange={handleChange}>
       {pre && <div className={styles.pre}>{pre}</div>}
       {text && <h2 className={styles.title}>{text}</h2>}
       <div className={styles.choices}>
