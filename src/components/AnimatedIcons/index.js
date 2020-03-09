@@ -10,13 +10,14 @@ import SVG from "react-inlinesvg";
 import { Portal } from "react-portal";
 import styles from "./styles.scss";
 
+import { useWindowSize } from "../../lib/utils";
+
 import faceAnimation from "./Face.svg";
 import cloudAnimation from "./cloud.svg";
-
 import animate from "./animateCloud";
 
 // Define our clouds. Position is percentage of screen x, y
-// Size is percentage of screen width
+// Size is percentage of average screen dimensions
 const clouds = [
   { name: "cloud1", position: [1, 1], size: 29 },
   { name: "cloud2", position: [70, 60], size: 32 },
@@ -26,6 +27,7 @@ const clouds = [
 
 export default props => {
   const [cloudColor, setCloudColor] = useState("#ffbcaa");
+  const size = useWindowSize();
 
   const initImages = () => {
     // console.log("init");
@@ -55,7 +57,7 @@ export default props => {
         gradient.style.stopColor = cloudColor;
       }
     });
-  }, [cloudColor]);
+  }, [cloudColor, size.width, size.height]);
 
   return (
     <Portal node={document.querySelector(".storylab-header-animation")}>
@@ -88,11 +90,15 @@ export default props => {
                 uniquifyIDs={true}
                 uniqueHash={cloud.name}
                 style={{
-                  // TODO: Set not random
                   position: "fixed",
-                  width: window.innerWidth * cloud.size * 0.01 + "px",
-                  left: window.innerWidth * cloud.position[0] * 0.01 + "px",
-                  top: window.innerHeight * cloud.position[1] * 0.01 + "px"
+                  width:
+                    // Average out the screen dimensions
+                    (((window.innerWidth + window.innerHeight) / 2) *
+                      cloud.size) /
+                      100 +
+                    "px",
+                  left: (window.innerWidth * cloud.position[0]) / 100 + "px",
+                  top: (window.innerHeight * cloud.position[1]) / 100 + "px"
                 }}
                 onLoad={() => {
                   // Delay animation or else won't work
