@@ -44,14 +44,14 @@
       color: rgb(27, 26, 101);
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       color: rgb(27, 26, 101) !important;
     }
   }
 
-  .Header {
-    background-color: transparent !important;
-  }
-
-
+  // TRANSPARENT BACKGROUND NOW DEFAULT IN ODYSSEY
+  // .Header {
+  //   background-color: transparent !important;
+  // }
 }
