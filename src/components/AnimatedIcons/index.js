@@ -29,10 +29,6 @@ export default props => {
   const [cloudColor, setCloudColor] = useState("#ffbcaa");
   const size = useWindowSize();
 
-  const initImages = () => {
-    // console.log("init");
-  };
-
   // Animation function moved to own file for brevity
   const animateCloud = animate;
 
@@ -59,6 +55,31 @@ export default props => {
     });
   }, [cloudColor, size.width, size.height]);
 
+  useEffect(() => {
+    // Set up intersection observer to detect if on screen
+    // to change colour of clouds
+    let target = document.querySelector(".travel699");
+
+    let callback = (entries, observer) => {
+      entries.forEach(entry => {
+        console.log(entry, "");
+      });
+    };
+
+    let observer = new IntersectionObserver(callback, {
+      rootMargin: "0px",
+      threshold: 0.0
+    });
+
+    observer.observe(target);
+
+    // Unmount function
+    // Unobserve so we don't fire multiple observations
+    return () => {
+      observer.unobserve(target);
+    };
+  }, []);
+
   return (
     <Portal node={document.querySelector(".storylab-header-animation")}>
       <div className={styles.root}>
@@ -68,7 +89,6 @@ export default props => {
             uniquifyIDs={true}
             uniqueHash="face"
             style={{}}
-            onLoad={initImages}
           />
         </div>
 
