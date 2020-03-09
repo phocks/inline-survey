@@ -6,8 +6,8 @@ import isEmpty from "lodash.isempty";
 
 import styles from "./styles.scss";
 import Question from "../Question";
-import Result from "../Result";
 import Chart from "../Chart";
+import UpArrow from "../UpArrow";
 
 // Helpers for element classes
 import { hasClass, addClass, removeClass } from "../../lib/utils";
@@ -128,7 +128,9 @@ export default props => {
       <Portal node={document.querySelector(".travel699chart")}>
         {"Q69_9" in answers && (
           <Chart
-            heading={"Young Australians think more travel will make them happier"}
+            heading={
+              "Young Australians think more travel will make them happier"
+            }
             group={"age2"}
             questionId={"Q69_9"}
             choice={answers.Q69_9}
@@ -150,7 +152,9 @@ export default props => {
       <Portal node={document.querySelector(".sleep6914chart")}>
         {"Q69_14" in answers && (
           <Chart
-            heading={"More sleep equals greater happiness for young Australians"}
+            heading={
+              "More sleep equals greater happiness for young Australians"
+            }
             group={"age2"}
             questionId={"Q69_14"}
             choice={answers.Q69_14}
@@ -229,7 +233,9 @@ export default props => {
       <Portal node={document.querySelector(".socialmedia6913chart")}>
         {"Q69_13" in answers && (
           <Chart
-            heading={"Young Australians want to spend less time on social media"}
+            heading={
+              "Young Australians want to spend less time on social media"
+            }
             group={"age2"}
             questionId={"Q69_13"}
             choice={answers.Q69_13}
@@ -286,7 +292,9 @@ export default props => {
       <Portal node={document.querySelector(".children6916chart2")}>
         {"Q69_16" in answers && (
           <Chart
-            heading={"Non-religious people say more children won’t make them happier"}
+            heading={
+              "Non-religious people say more children won’t make them happier"
+            }
             group={"religion"}
             questionId={"Q69_16"}
             choice={answers.Q69_16}
@@ -365,7 +373,9 @@ export default props => {
       <Portal node={document.querySelector(".community6910chart2")}>
         {"Q69_10" in answers && (
           <Chart
-            heading={"Left-leaning voters want to get involved with their communities"}
+            heading={
+              "Left-leaning voters want to get involved with their communities"
+            }
             group={"vote"}
             questionId={"Q69_10"}
             choice={answers.Q69_10}
@@ -418,7 +428,10 @@ export default props => {
           />
         )}
       </Portal>
-      <div className={styles.displayNone}></div>
+      {/* <div className={styles.displayNone}></div> */}
+      <Portal node={document.querySelector(".interactivefooter")}>
+        <UpArrow />
+      </Portal>
     </div>
   );
 };
