@@ -194,44 +194,48 @@ export default props => {
 
                 {/* Optional annotations to display total agree/disagree */}
                 <div className={styles.relativeLayer}>
-                  <div
-                    className={styles.annotationContainer}
-                    style={{
-                      left: disagreeX - ANNOTATION_WIDTH_OFFSET / 2,
-                      width: disagreeWidth + ANNOTATION_WIDTH_OFFSET,
-                      transform: `translateY(-${Math.max(
-                        ANNOTATION_OFFSET + scale(chartData[row][0]) * 0.5,
-                        ANNOTATION_OFFSET + scale(chartData[row][1]) * 0.5
-                      )}px)`
-                    }}
-                  >
-                    <SVG
-                      src={brace}
-                      uniquifyIDs={true}
-                      uniqueHash="disagree-brace"
-                      style={{ width: "100%" }}
-                    />
-                  </div>
+                  {props.annotateRow === row && props.annotateDisagree && (
+                    <div
+                      className={styles.annotationContainer}
+                      style={{
+                        left: disagreeX - ANNOTATION_WIDTH_OFFSET / 2,
+                        width: disagreeWidth + ANNOTATION_WIDTH_OFFSET,
+                        transform: `translateY(-${Math.max(
+                          ANNOTATION_OFFSET + scale(chartData[row][0]) * 0.5,
+                          ANNOTATION_OFFSET + scale(chartData[row][1]) * 0.5
+                        )}px)`
+                      }}
+                    >
+                      <SVG
+                        src={brace}
+                        uniquifyIDs={true}
+                        uniqueHash="disagree-brace"
+                        style={{ width: "100%" }}
+                      />
+                    </div>
+                  )}
 
-                  <div
-                    className={styles.annotationContainer}
-                    style={{
-                      left: agreeX - ANNOTATION_WIDTH_OFFSET / 2,
-                      width: agreeWidth + ANNOTATION_WIDTH_OFFSET,
-                      // Get highest offset
-                      transform: `translateY(-${Math.max(
-                        ANNOTATION_OFFSET + scale(chartData[row][3]) * 0.5,
-                        ANNOTATION_OFFSET + scale(chartData[row][4]) * 0.5
-                      )}px)`
-                    }}
-                  >
-                    <SVG
-                      src={brace}
-                      uniquifyIDs={true}
-                      uniqueHash="agree-brace"
-                      style={{ width: "100%" }}
-                    />
-                  </div>
+                  {props.annotateRow === row && props.annotateAgree && (
+                    <div
+                      className={styles.annotationContainer}
+                      style={{
+                        left: agreeX - ANNOTATION_WIDTH_OFFSET / 2,
+                        width: agreeWidth + ANNOTATION_WIDTH_OFFSET,
+                        // Get highest offset
+                        transform: `translateY(-${Math.max(
+                          ANNOTATION_OFFSET + scale(chartData[row][3]) * 0.5,
+                          ANNOTATION_OFFSET + scale(chartData[row][4]) * 0.5
+                        )}px)`
+                      }}
+                    >
+                      <SVG
+                        src={brace}
+                        uniquifyIDs={true}
+                        uniqueHash="agree-brace"
+                        style={{ width: "100%" }}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

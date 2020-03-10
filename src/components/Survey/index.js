@@ -95,6 +95,9 @@ export default props => {
             choice={answers.Q69_1}
             data={percentData}
             theme={"pink"}
+            annotateRow={"$0 to $599 per week"}
+            annotateDisagree={false}
+            annotateAgree={true}
           />
         )}
       </Portal>
