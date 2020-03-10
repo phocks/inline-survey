@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { scaleLinear } from "d3-scale";
 
 import styles from "./styles.scss";
+
+import brace from "./brace.svg";
 
 // Make a function to control size of dot
 const scale = scaleLinear()
@@ -10,9 +12,20 @@ const scale = scaleLinear()
 
 // Percentage values sit on top of dots
 const VALUE_OFFSET = 10;
+const ANNOTATION_OFFSET = 10;
 
 export default props => {
   const { theme = "pink" } = props;
+
+  const [disagreeX, setDisagreeX] = useState(null);
+  const [agreeX, setAgreeX] = useState(null);
+  const [disagreeWidth, setDisagreeWidth] = useState(null);
+  const [agreeWidth, setAgreeWidth] = useState(null);
+
+  const dot1container = useRef(null);
+  const dot2container = useRef(null);
+  const dot4container = useRef(null);
+  const dot5container = useRef(null);
 
   const filteredData = props.data.filter(entry => {
     return entry.question === props.questionId && entry.group === props.group;
@@ -38,6 +51,29 @@ export default props => {
     };
   };
 
+  useEffect(() => {
+    // Calculate the middle of dots for annotations
+    // First 2 dots
+    const dot1Bounds = dot1container.current.getBoundingClientRect();
+    const dot2Bounds = dot2container.current.getBoundingClientRect();
+
+    const dot1Center = (dot1Bounds.left + dot1Bounds.right) / 2;
+    const dot2Center = (dot2Bounds.left + dot2Bounds.right) / 2;
+
+    setDisagreeX(dot1Center - dot1Bounds.left);
+    setDisagreeWidth(dot2Center - dot1Center);
+
+    // Last 2 dots
+    const dot4Bounds = dot4container.current.getBoundingClientRect();
+    const dot5Bounds = dot5container.current.getBoundingClientRect();
+
+    const dot4Center = (dot4Bounds.left + dot4Bounds.right) / 2;
+    const dot5Center = (dot5Bounds.left + dot5Bounds.right) / 2;
+
+    setAgreeX(dot4Center - dot1Bounds.left);
+    setAgreeWidth(dot5Center - dot4Center);
+  });
+
   return (
     <div className={`${styles.root} ${styles[theme]}`}>
       <div className={styles.container}>
@@ -53,18 +89,20 @@ export default props => {
         {Object.keys(chartData).map((row, iteration) => {
           return (
             <div key={iteration}>
+              {/* Row label */}
               <div className={styles.byGroup}>{row}</div>
+
               <div className={styles.row}>
                 <div className={styles.line}></div>
 
                 <div className={styles.layer}>
-                  <div className={styles.dotContainer}>
+                  <div className={styles.dotContainer} ref={dot1container}>
                     <div
                       className={styles.dot}
                       style={getDimensions(chartData[row][0])}
                     ></div>
                   </div>
-                  <div className={styles.dotContainer}>
+                  <div className={styles.dotContainer} ref={dot2container}>
                     <div
                       className={styles.dot}
                       style={getDimensions(chartData[row][1])}
@@ -76,13 +114,13 @@ export default props => {
                       style={getDimensions(chartData[row][2])}
                     ></div>
                   </div>
-                  <div className={styles.dotContainer}>
+                  <div className={styles.dotContainer} ref={dot4container}>
                     <div
                       className={styles.dot}
                       style={getDimensions(chartData[row][3])}
                     ></div>
                   </div>
-                  <div className={styles.dotContainer}>
+                  <div className={styles.dotContainer} ref={dot5container}>
                     <div
                       className={styles.dot}
                       style={getDimensions(chartData[row][4])}
@@ -146,6 +184,33 @@ export default props => {
                       {(chartData[row][4] * 100).toFixed(0) + "%"}
                     </div>
                   </div>
+                </div>
+
+                <div className={styles.relativeLayer}>
+                  <div
+                    className={styles.annotationContainer}
+                    style={{
+                      left: disagreeX,
+                      width: disagreeWidth,
+                      transform: `translateY(-${Math.max(
+                        ANNOTATION_OFFSET + scale(chartData[row][0]) * 0.5,
+                        ANNOTATION_OFFSET + scale(chartData[row][1]) * 0.5
+                      )}px)`
+                    }}
+                  ></div>
+                  
+                  <div
+                    className={styles.annotationContainer}
+                    style={{
+                      left: agreeX,
+                      width: agreeWidth,
+                      // Get highest offset
+                      transform: `translateY(-${Math.max(
+                        ANNOTATION_OFFSET + scale(chartData[row][3]) * 0.5,
+                        ANNOTATION_OFFSET + scale(chartData[row][4]) * 0.5
+                      )}px)`
+                    }}
+                  ></div>
                 </div>
               </div>
             </div>
