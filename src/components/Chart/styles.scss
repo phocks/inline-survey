@@ -103,9 +103,13 @@
       // border-top: 1px solid #A73953;
       // border-left: 1px solid #A73953;
       // border-right: 1px solid #A73953;
-    }
 
-    
+      svg {
+        g {
+          stroke: #a73953;
+        }
+      }
+    }
 
     .line {
       position: absolute;
@@ -135,6 +139,14 @@
         color: #1064a1;
       }
     }
+
+    .annotation-container {
+      svg {
+        g {
+          stroke: #1064a1;
+        }
+      }
+    }
   }
 }
 
@@ -153,6 +165,14 @@
         color: #b52d1f;
       }
     }
+
+    .annotation-container {
+      svg {
+        g {
+          stroke: #b52d1f;
+        }
+      }
+    }
   }
 }
 
@@ -169,6 +189,14 @@
 
       .value {
         color: #1a6b6b;
+      }
+    }
+
+    .annotation-container {
+      svg {
+        g {
+          stroke: #1a6b6b;
+        }
       }
     }
   }

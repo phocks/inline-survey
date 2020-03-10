@@ -15,7 +15,7 @@ const scale = scaleLinear()
 
 // Percentage values sit on top of dots
 const VALUE_OFFSET = 10;
-const ANNOTATION_OFFSET = 24;
+const ANNOTATION_OFFSET = 28;
 const ANNOTATION_WIDTH_OFFSET = 6;
 
 export default props => {
@@ -204,12 +204,14 @@ export default props => {
                         ANNOTATION_OFFSET + scale(chartData[row][1]) * 0.5
                       )}px)`
                     }}
-                  ><SVG
-                  src={brace}
-                  uniquifyIDs={true}
-                  uniqueHash="disagree-brace"
-                  style={{ width: "100%" }}
-                /></div>
+                  >
+                    <SVG
+                      src={brace}
+                      uniquifyIDs={true}
+                      uniqueHash="disagree-brace"
+                      style={{ width: "100%" }}
+                    />
+                  </div>
 
                   <div
                     className={styles.annotationContainer}
