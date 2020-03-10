@@ -15,7 +15,7 @@ const scale = scaleLinear()
 
 // Percentage values sit on top of dots
 const VALUE_OFFSET = 10;
-const ANNOTATION_OFFSET = 40;
+const ANNOTATION_OFFSET = 48;
 const ANNOTATION_WIDTH_OFFSET = 6;
 
 export default props => {
@@ -96,7 +96,16 @@ export default props => {
           return (
             <div key={iteration}>
               {/* Row label */}
-              <div className={styles.byGroup}>{row}</div>
+              <div
+                className={styles.byGroup}
+                style={
+                  props.annotateRow === row && props.annotateDisagree
+                    ? { minHeight: "50px" }
+                    : {}
+                }
+              >
+                {row}
+              </div>
 
               <div className={styles.row}>
                 <div className={styles.line}></div>
@@ -206,6 +215,13 @@ export default props => {
                         )}px)`
                       }}
                     >
+                      <span className={styles.annotationValue}>
+                        DISAGREE{" "}
+                        {Math.round(
+                          (chartData[row][0] + chartData[row][1]) * 100
+                        )}
+                        %
+                      </span>
                       <SVG
                         src={brace}
                         uniquifyIDs={true}
@@ -228,7 +244,13 @@ export default props => {
                         )}px)`
                       }}
                     >
-                      <span className={styles.annotationValue}>AGREE {(chartData[row][3] + chartData[row][4]) * 100}%</span>
+                      <span className={styles.annotationValue}>
+                        AGREE{" "}
+                        {Math.round(
+                          (chartData[row][3] + chartData[row][4]) * 100
+                        )}
+                        %
+                      </span>
                       <SVG
                         src={brace}
                         uniquifyIDs={true}

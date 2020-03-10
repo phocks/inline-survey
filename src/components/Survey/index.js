@@ -96,7 +96,7 @@ export default props => {
             data={percentData}
             theme={"pink"}
             annotateRow={"$0 to $599 per week"}
-            annotateDisagree={false}
+            annotateDisagree={true}
             annotateAgree={true}
           />
         )}
