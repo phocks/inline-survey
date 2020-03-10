@@ -15,7 +15,7 @@ const scale = scaleLinear()
 
 // Percentage values sit on top of dots
 const VALUE_OFFSET = 10;
-const ANNOTATION_OFFSET = 28;
+const ANNOTATION_OFFSET = 40;
 const ANNOTATION_WIDTH_OFFSET = 6;
 
 export default props => {
@@ -228,6 +228,7 @@ export default props => {
                         )}px)`
                       }}
                     >
+                      <span className={styles.annotationValue}>AGREE {(chartData[row][3] + chartData[row][4]) * 100}%</span>
                       <SVG
                         src={brace}
                         uniquifyIDs={true}
