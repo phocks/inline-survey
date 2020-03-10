@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { scaleLinear } from "d3-scale";
+import SVG from "react-inlinesvg";
 
 import { useWindowSize } from "../../lib/utils";
-
 
 import styles from "./styles.scss";
 
@@ -15,7 +15,8 @@ const scale = scaleLinear()
 
 // Percentage values sit on top of dots
 const VALUE_OFFSET = 10;
-const ANNOTATION_OFFSET = 10;
+const ANNOTATION_OFFSET = 24;
+const ANNOTATION_WIDTH_OFFSET = 6;
 
 export default props => {
   const { theme = "pink" } = props;
@@ -191,31 +192,44 @@ export default props => {
                   </div>
                 </div>
 
+                {/* Optional annotations to display total agree/disagree */}
                 <div className={styles.relativeLayer}>
                   <div
                     className={styles.annotationContainer}
                     style={{
-                      left: disagreeX,
-                      width: disagreeWidth,
+                      left: disagreeX - ANNOTATION_WIDTH_OFFSET / 2,
+                      width: disagreeWidth + ANNOTATION_WIDTH_OFFSET,
                       transform: `translateY(-${Math.max(
                         ANNOTATION_OFFSET + scale(chartData[row][0]) * 0.5,
                         ANNOTATION_OFFSET + scale(chartData[row][1]) * 0.5
                       )}px)`
                     }}
-                  ></div>
-                  
+                  ><SVG
+                  src={brace}
+                  uniquifyIDs={true}
+                  uniqueHash="disagree-brace"
+                  style={{ width: "100%" }}
+                /></div>
+
                   <div
                     className={styles.annotationContainer}
                     style={{
-                      left: agreeX,
-                      width: agreeWidth,
+                      left: agreeX - ANNOTATION_WIDTH_OFFSET / 2,
+                      width: agreeWidth + ANNOTATION_WIDTH_OFFSET,
                       // Get highest offset
                       transform: `translateY(-${Math.max(
                         ANNOTATION_OFFSET + scale(chartData[row][3]) * 0.5,
                         ANNOTATION_OFFSET + scale(chartData[row][4]) * 0.5
                       )}px)`
                     }}
-                  ></div>
+                  >
+                    <SVG
+                      src={brace}
+                      uniquifyIDs={true}
+                      uniqueHash="agree-brace"
+                      style={{ width: "100%" }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
