@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { scaleLinear } from "d3-scale";
 
+import { useWindowSize } from "../../lib/utils";
+
+
 import styles from "./styles.scss";
 
 import brace from "./brace.svg";
@@ -16,6 +19,8 @@ const ANNOTATION_OFFSET = 10;
 
 export default props => {
   const { theme = "pink" } = props;
+
+  const size = useWindowSize();
 
   const [disagreeX, setDisagreeX] = useState(null);
   const [agreeX, setAgreeX] = useState(null);
@@ -72,7 +77,7 @@ export default props => {
 
     setAgreeX(dot4Center - dot1Bounds.left);
     setAgreeWidth(dot5Center - dot4Center);
-  });
+  }, [size.width, size.height]);
 
   return (
     <div className={`${styles.root} ${styles[theme]}`}>
