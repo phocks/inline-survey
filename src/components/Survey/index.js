@@ -313,7 +313,7 @@ export default props => {
       <Portal node={document.querySelector(".family695chart")}>
         {"Q69_5" in answers && (
           <Chart
-            heading={"Religious people would be happier with more family time"}
+            heading={"Everyone would be happier with more family time"}
             group={"religion"}
             questionId={"Q69_5"}
             choice={answers.Q69_5}
