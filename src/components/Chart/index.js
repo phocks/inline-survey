@@ -34,6 +34,7 @@ export default props => {
   const dot4container = useRef(null);
   const dot5container = useRef(null);
 
+
   const filteredData = props.data.filter(entry => {
     return entry.question === props.questionId && entry.group === props.group;
   });

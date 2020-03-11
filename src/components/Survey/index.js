@@ -87,7 +87,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".money691chart")}>
-        {"Q69_1" in answers && (
+        {"Q69_1" in answers && percentData && (
           <Chart
             heading={"Even the rich think more money would make them happier."}
             group={"income"}
@@ -100,7 +100,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".money691chart2")}>
-        {"Q69_1" in answers && (
+        {"Q69_1" in answers && percentData && (
           <Chart
             heading={"As people get older, they desire money less"}
             group={"age2"}
@@ -134,7 +134,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".travel699chart")}>
-        {"Q69_9" in answers && (
+        {"Q69_9" in answers && percentData && (
           <Chart
             heading={
               "Young Australians think more travel will make them happier"
@@ -158,7 +158,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".sleep6914chart")}>
-        {"Q69_14" in answers && (
+        {"Q69_14" in answers && percentData && (
           <Chart
             heading={
               "More sleep equals greater happiness for young Australians"
@@ -194,7 +194,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".sex697chart")}>
-        {"Q69_7" in answers && (
+        {"Q69_7" in answers && percentData && (
           <Chart
             heading={"Men want a better sex life"}
             group={"sex"}
@@ -228,7 +228,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".errands6915chart")}>
-        {"Q69_15" in answers && (
+        {"Q69_15" in answers && percentData && (
           <Chart
             heading={"High income earners want to cut back on errands"}
             group={"income"}
@@ -253,7 +253,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".errands6915chart2")}>
-        {"Q69_15" in answers && (
+        {"Q69_15" in answers && percentData && (
           <Chart
             heading={"Women want to spend less time on chores"}
             group={"sex"}
@@ -287,7 +287,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".socialmedia6913chart")}>
-        {"Q69_13" in answers && (
+        {"Q69_13" in answers && percentData && (
           <Chart
             heading={
               "Young Australians want to spend less time on social media"
@@ -311,7 +311,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".family695chart")}>
-        {"Q69_5" in answers && (
+        {"Q69_5" in answers && percentData && (
           <Chart
             heading={"Everyone would be happier with more family time"}
             group={"religion"}
@@ -333,7 +333,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".children6916chart")}>
-        {"Q69_16" in answers && (
+        {"Q69_16" in answers && percentData && (
           <Chart
             heading={"Women don’t think more children equals happiness"}
             group={"sex"}
@@ -360,7 +360,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".children6916chart2")}>
-        {"Q69_16" in answers && (
+        {"Q69_16" in answers && percentData && (
           <Chart
             heading={
               "Non-religious people say more children won’t make them happier"
@@ -391,7 +391,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".romantic6917chart")}>
-        {"Q69_17" in answers && (
+        {"Q69_17" in answers && percentData && (
           <Chart
             heading={"Young people yearn for a better romantic relationship"}
             group={"age2"}
@@ -425,7 +425,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".job698chart")}>
-        {"Q69_8" in answers && (
+        {"Q69_8" in answers && percentData && (
           <Chart
             heading={"Under 30s want a better job"}
             group={"age2"}
@@ -454,7 +454,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".community6910chart")}>
-        {"Q69_10" in answers && (
+        {"Q69_10" in answers && percentData && (
           <Chart
             heading={"Inner metro dwellers want more connection with community"}
             group={"region"}
@@ -479,7 +479,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".community6910chart2")}>
-        {"Q69_10" in answers && (
+        {"Q69_10" in answers && percentData && (
           <Chart
             heading={
               "Left-leaning voters want to get involved with their communities"
@@ -489,7 +489,6 @@ export default props => {
             choice={answers.Q69_10}
             data={percentData}
             theme={"orange"}
-            
           />
         )}
       </Portal>
@@ -504,7 +503,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".bettercare6911chart")}>
-        {"Q69_11" in answers && (
+        {"Q69_11" in answers && percentData && (
           <Chart
             heading={"Under 40s want to take better care of themselves"}
             group={"age2"}
@@ -538,7 +537,7 @@ export default props => {
       </Portal>
 
       <Portal node={document.querySelector(".nature694chart")}>
-        {"Q69_4" in answers && (
+        {"Q69_4" in answers && percentData && (
           <Chart
             heading={"People in all States want to spend more time in nature"}
             group={"state"}
