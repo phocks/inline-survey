@@ -272,6 +272,7 @@ export default props => {
           questionId={"Q69_16"}
           onChange={handleChange}
           theme={"green"}
+          
         />
       </Portal>
 
@@ -284,6 +285,8 @@ export default props => {
             choice={answers.Q69_16}
             data={percentData}
             theme={"green"}
+            annotateRow={"Women"}
+            annotateDisagree={true}
           />
         )}
       </Portal>
