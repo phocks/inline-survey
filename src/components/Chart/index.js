@@ -17,6 +17,7 @@ const scale = scaleLinear()
 const VALUE_OFFSET = 10;
 const ANNOTATION_OFFSET = 48;
 const ANNOTATION_WIDTH_OFFSET = 6;
+const ROW_TITLE_OFFSET = 34;
 
 export default props => {
   const { theme = "pink" } = props;
@@ -100,7 +101,12 @@ export default props => {
                 className={styles.byGroup}
                 style={
                   props.annotateRow === row && props.annotateDisagree
-                    ? { minHeight: "50px" }
+                    ? {
+                        minHeight: `${Math.max(
+                          ROW_TITLE_OFFSET + (scale(chartData[row][0])) / 2,
+                          ROW_TITLE_OFFSET + (scale(chartData[row][1])) / 2
+                        )}px`
+                      }
                     : {}
                 }
               >
