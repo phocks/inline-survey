@@ -15,7 +15,7 @@ const scale = scaleLinear()
 
 // Percentage values sit on top of dots
 const VALUE_OFFSET = 10;
-const ANNOTATION_OFFSET = 48;
+const ANNOTATION_OFFSET = 42;
 const ANNOTATION_WIDTH_OFFSET = 0.05;
 const ROW_TITLE_OFFSET = 34;
 
