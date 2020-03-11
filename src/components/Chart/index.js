@@ -16,7 +16,7 @@ const scale = scaleLinear()
 // Percentage values sit on top of dots
 const VALUE_OFFSET = 10;
 const ANNOTATION_OFFSET = 48;
-const ANNOTATION_WIDTH_OFFSET = 6;
+const ANNOTATION_WIDTH_OFFSET = 0.05;
 const ROW_TITLE_OFFSET = 34;
 
 export default props => {
@@ -219,8 +219,12 @@ export default props => {
                       <div
                         className={styles.annotationContainer}
                         style={{
-                          left: disagreeX - ANNOTATION_WIDTH_OFFSET / 2,
-                          width: disagreeWidth + ANNOTATION_WIDTH_OFFSET,
+                          left:
+                            disagreeX -
+                            (disagreeWidth * ANNOTATION_WIDTH_OFFSET) / 2,
+                          width:
+                            disagreeWidth +
+                            disagreeWidth * ANNOTATION_WIDTH_OFFSET,
                           transform: `translateY(-${Math.max(
                             ANNOTATION_OFFSET + scale(chartData[row][0]) * 0.5,
                             ANNOTATION_OFFSET + scale(chartData[row][1]) * 0.5
@@ -250,8 +254,12 @@ export default props => {
                       <div
                         className={styles.annotationContainer}
                         style={{
-                          left: agreeX - ANNOTATION_WIDTH_OFFSET / 2,
-                          width: agreeWidth + ANNOTATION_WIDTH_OFFSET,
+                          left:
+                            agreeX -
+                            (disagreeWidth * ANNOTATION_WIDTH_OFFSET) / 2,
+                          width:
+                            agreeWidth +
+                            disagreeWidth * ANNOTATION_WIDTH_OFFSET,
                           // Get highest offset
                           transform: `translateY(-${Math.max(
                             ANNOTATION_OFFSET + scale(chartData[row][3]) * 0.5,
