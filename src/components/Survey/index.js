@@ -95,13 +95,6 @@ export default props => {
             choice={answers.Q69_1}
             data={percentData}
             theme={"pink"}
-            annotateRows={{
-              ["$0 to $599 per week"]: {
-                show: true,
-                disagree: true,
-                agree: true
-              }
-            }}
           />
         )}
       </Portal>
@@ -115,6 +108,18 @@ export default props => {
             choice={answers.Q69_1}
             data={percentData}
             theme={"pink"}
+            annotateRows={{
+              ["18-24"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              },
+              ["75+"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              }
+            }}
           />
         )}
       </Portal>
@@ -163,6 +168,18 @@ export default props => {
             choice={answers.Q69_14}
             data={percentData}
             theme={"orange"}
+            annotateRows={{
+              ["18-24"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              },
+              ["75+"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              }
+            }}
           />
         )}
       </Portal>
@@ -185,6 +202,18 @@ export default props => {
             choice={answers.Q69_7}
             data={percentData}
             theme={"green"}
+            annotateRows={{
+              ["Women"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              },
+              ["Men"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              }
+            }}
           />
         )}
       </Portal>
@@ -207,6 +236,18 @@ export default props => {
             choice={answers.Q69_15}
             data={percentData}
             theme={"pink"}
+            annotateRows={{
+              ["$0 to $599 per week"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              },
+              ["$3,000 or more per week"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              }
+            }}
           />
         )}
       </Portal>
@@ -220,6 +261,18 @@ export default props => {
             choice={answers.Q69_15}
             data={percentData}
             theme={"pink"}
+            annotateRows={{
+              ["Women"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              },
+              ["Men"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              }
+            }}
           />
         )}
       </Portal>
@@ -290,6 +343,18 @@ export default props => {
             theme={"green"}
             annotateRow={"Women"}
             annotateDisagree={true}
+            annotateRows={{
+              ["Women"]: {
+                show: true,
+                disagree: true,
+                agree: false
+              },
+              ["Men"]: {
+                show: true,
+                disagree: true,
+                agree: false
+              }
+            }}
           />
         )}
       </Portal>
@@ -305,6 +370,13 @@ export default props => {
             choice={answers.Q69_16}
             data={percentData}
             theme={"green"}
+            annotateRows={{
+              ["No religion"]: {
+                show: true,
+                disagree: true,
+                agree: false
+              }
+            }}
           />
         )}
       </Portal>
@@ -327,6 +399,18 @@ export default props => {
             choice={answers.Q69_17}
             data={percentData}
             theme={"pink"}
+            annotateRows={{
+              ["18-24"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              },
+              ["75+"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              }
+            }}
           />
         )}
       </Portal>
@@ -349,6 +433,13 @@ export default props => {
             choice={answers.Q69_8}
             data={percentData}
             theme={"blue"}
+            annotateRows={{
+              ["18-24"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              }
+            }}
           />
         )}
       </Portal>
@@ -371,6 +462,18 @@ export default props => {
             choice={answers.Q69_10}
             data={percentData}
             theme={"orange"}
+            annotateRows={{
+              ["Inner Metro"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              },
+              ["Rural"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              }
+            }}
           />
         )}
       </Portal>
@@ -386,6 +489,7 @@ export default props => {
             choice={answers.Q69_10}
             data={percentData}
             theme={"orange"}
+            
           />
         )}
       </Portal>
@@ -408,6 +512,18 @@ export default props => {
             choice={answers.Q69_11}
             data={percentData}
             theme={"green"}
+            annotateRows={{
+              ["18-24"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              },
+              ["75+"]: {
+                show: true,
+                disagree: false,
+                agree: true
+              }
+            }}
           />
         )}
       </Portal>
