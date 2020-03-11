@@ -95,9 +95,13 @@ export default props => {
             choice={answers.Q69_1}
             data={percentData}
             theme={"pink"}
-            annotateRow={"$0 to $599 per week"}
-            annotateDisagree={true}
-            annotateAgree={true}
+            annotateRows={{
+              ["$0 to $599 per week"]: {
+                show: true,
+                disagree: true,
+                agree: true
+              }
+            }}
           />
         )}
       </Portal>
@@ -272,7 +276,6 @@ export default props => {
           questionId={"Q69_16"}
           onChange={handleChange}
           theme={"green"}
-          
         />
       </Portal>
 

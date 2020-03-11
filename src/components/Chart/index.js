@@ -100,11 +100,14 @@ export default props => {
               <div
                 className={styles.byGroup}
                 style={
-                  props.annotateRow === row && props.annotateDisagree
+                  props.annotateRows &&
+                  props.annotateRows[row] &&
+                  props.annotateRows[row].show &&
+                  props.annotateRows[row].disagree
                     ? {
                         minHeight: `${Math.max(
-                          ROW_TITLE_OFFSET + (scale(chartData[row][0])) / 2,
-                          ROW_TITLE_OFFSET + (scale(chartData[row][1])) / 2
+                          ROW_TITLE_OFFSET + scale(chartData[row][0]) / 2,
+                          ROW_TITLE_OFFSET + scale(chartData[row][1]) / 2
                         )}px`
                       }
                     : {}
@@ -209,62 +212,68 @@ export default props => {
 
                 {/* Optional annotations to display total agree/disagree */}
                 <div className={styles.relativeLayer}>
-                  {props.annotateRow === row && props.annotateDisagree && (
-                    <div
-                      className={styles.annotationContainer}
-                      style={{
-                        left: disagreeX - ANNOTATION_WIDTH_OFFSET / 2,
-                        width: disagreeWidth + ANNOTATION_WIDTH_OFFSET,
-                        transform: `translateY(-${Math.max(
-                          ANNOTATION_OFFSET + scale(chartData[row][0]) * 0.5,
-                          ANNOTATION_OFFSET + scale(chartData[row][1]) * 0.5
-                        )}px)`
-                      }}
-                    >
-                      <span className={styles.annotationValue}>
-                        DISAGREE{" "}
-                        {Math.round(
-                          (chartData[row][0] + chartData[row][1]) * 100
-                        )}
-                        %
-                      </span>
-                      <SVG
-                        src={brace}
-                        uniquifyIDs={true}
-                        uniqueHash="disagree-brace"
-                        style={{ width: "100%" }}
-                      />
-                    </div>
-                  )}
+                  {props.annotateRows &&
+                    props.annotateRows[row] &&
+                    props.annotateRows[row].show &&
+                    props.annotateRows[row].disagree && (
+                      <div
+                        className={styles.annotationContainer}
+                        style={{
+                          left: disagreeX - ANNOTATION_WIDTH_OFFSET / 2,
+                          width: disagreeWidth + ANNOTATION_WIDTH_OFFSET,
+                          transform: `translateY(-${Math.max(
+                            ANNOTATION_OFFSET + scale(chartData[row][0]) * 0.5,
+                            ANNOTATION_OFFSET + scale(chartData[row][1]) * 0.5
+                          )}px)`
+                        }}
+                      >
+                        <span className={styles.annotationValue}>
+                          DISAGREE{" "}
+                          {Math.round(
+                            (chartData[row][0] + chartData[row][1]) * 100
+                          )}
+                          %
+                        </span>
+                        <SVG
+                          src={brace}
+                          uniquifyIDs={true}
+                          uniqueHash="disagree-brace"
+                          style={{ width: "100%" }}
+                        />
+                      </div>
+                    )}
 
-                  {props.annotateRow === row && props.annotateAgree && (
-                    <div
-                      className={styles.annotationContainer}
-                      style={{
-                        left: agreeX - ANNOTATION_WIDTH_OFFSET / 2,
-                        width: agreeWidth + ANNOTATION_WIDTH_OFFSET,
-                        // Get highest offset
-                        transform: `translateY(-${Math.max(
-                          ANNOTATION_OFFSET + scale(chartData[row][3]) * 0.5,
-                          ANNOTATION_OFFSET + scale(chartData[row][4]) * 0.5
-                        )}px)`
-                      }}
-                    >
-                      <span className={styles.annotationValue}>
-                        AGREE{" "}
-                        {Math.round(
-                          (chartData[row][3] + chartData[row][4]) * 100
-                        )}
-                        %
-                      </span>
-                      <SVG
-                        src={brace}
-                        uniquifyIDs={true}
-                        uniqueHash="agree-brace"
-                        style={{ width: "100%" }}
-                      />
-                    </div>
-                  )}
+                  {props.annotateRows &&
+                    props.annotateRows[row] &&
+                    props.annotateRows[row].show &&
+                    props.annotateRows[row].agree && (
+                      <div
+                        className={styles.annotationContainer}
+                        style={{
+                          left: agreeX - ANNOTATION_WIDTH_OFFSET / 2,
+                          width: agreeWidth + ANNOTATION_WIDTH_OFFSET,
+                          // Get highest offset
+                          transform: `translateY(-${Math.max(
+                            ANNOTATION_OFFSET + scale(chartData[row][3]) * 0.5,
+                            ANNOTATION_OFFSET + scale(chartData[row][4]) * 0.5
+                          )}px)`
+                        }}
+                      >
+                        <span className={styles.annotationValue}>
+                          AGREE{" "}
+                          {Math.round(
+                            (chartData[row][3] + chartData[row][4]) * 100
+                          )}
+                          %
+                        </span>
+                        <SVG
+                          src={brace}
+                          uniquifyIDs={true}
+                          uniqueHash="agree-brace"
+                          style={{ width: "100%" }}
+                        />
+                      </div>
+                    )}
                 </div>
               </div>
             </div>
