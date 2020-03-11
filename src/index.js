@@ -1,5 +1,6 @@
 import "regenerator-runtime/runtime"; // async/await support
-import 'intersection-observer'; // Polyfill
+import "./lib/polyfills";
+import "intersection-observer"; // Polyfill
 import React from "react";
 import { render } from "react-dom";
 import App from "./components/App";
