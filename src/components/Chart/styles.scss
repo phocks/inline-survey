@@ -107,6 +107,11 @@
       svg {
         g {
           stroke: #a73953;
+          @supports (-ms-ime-align: auto) {
+            .page .lines path {
+              stroke-width: 0.15px;
+            }
+          }
         }
       }
 
