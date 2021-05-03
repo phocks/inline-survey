@@ -35,7 +35,7 @@
     "react-dom": "^16.13.0",
     "react-inlinesvg": "^1.2.0",
     "react-portal": "^4.2.1",
-    "regenerator-runtime": "^0.13.3",
+    "regenerator-runtime": "^0.13.7",
     "spanify": "^1.4.0",
     "unfetch": "^4.1.0"
   }
