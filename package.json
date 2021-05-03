@@ -37,6 +37,6 @@
     "react-portal": "^4.2.1",
     "regenerator-runtime": "^0.13.3",
     "spanify": "^1.4.0",
-    "unfetch": "^4.1.0"
+    "unfetch": "^4.2.0"
   }
 }
